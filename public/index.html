@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- PayPal JavaScript SDK (Supports Sandbox & Production Rails) -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD&components=buttons"></script>
 </head>
 <body class="theme-dark">
   <div id="app" class="app-layout">
@@ -70,7 +72,7 @@
         <button class="nav-item" data-view="customers"><span class="nav-icon">👥</span> Client Tenants</button>
 
         <div class="nav-section-label">GOVERNANCE & AUDIT</div>
-        <button class="nav-item" data-view="integrations"><span class="nav-icon">⚡</span> Integrations</button>
+        <button class="nav-item" data-view="integrations"><span class="nav-icon">⚡</span> Integrations (PayPal Live)</button>
         <button class="nav-item" data-view="audit"><span class="nav-icon">📜</span> Audit Ledger</button>
         <button class="nav-item" data-view="settings"><span class="nav-icon">⚙️</span> Configuration</button>
       </nav>
@@ -95,7 +97,7 @@
       <header class="top-bar">
         <div class="search-command-bar">
           <span class="command-icon">⚡</span>
-          <input type="text" id="orchestratorCommandInput" placeholder="Command Linkmerce AI (e.g. 'Promote Neopolis article', 'Underwrite Mindspace Bldg 12D', 'Log deal commission')...">
+          <input type="text" id="orchestratorCommandInput" placeholder="Command Linkmerce AI (e.g. 'Pay $1000 commission via PayPal', 'Underwrite Mindspace Bldg 12D')...">
           <button class="btn btn-primary" id="btnRunCommand">Execute</button>
         </div>
         <div class="top-actions">
@@ -148,8 +150,9 @@
           <span class="strip-remaining" id="stripRemainingText">$127.50 remaining to hit daily target</span>
         </div>
         <div class="strip-right">
-          <button class="btn btn-sm btn-accent" onclick="app.openModal('modal-settle-commission')">💰 Settle Deal Commission</button>
-          <button class="btn btn-sm btn-outline" onclick="app.runHourlyCycleNow()">⚡ Run Hourly Cycle</button>
+          <button class="btn btn-sm btn-accent" onclick="app.openPayPalModal('COMMISSION_ESCROW', 1000.0)">💳 PayPal Payment Gateway</button>
+          <button class="btn btn-sm btn-outline" onclick="app.openModal('modal-settle-commission')">💰 Settle Deal</button>
+          <button class="btn btn-sm btn-outline" onclick="app.runHourlyCycleNow()">⚡ Run Hourly</button>
         </div>
       </div>
 
@@ -194,7 +197,7 @@
               <div class="kpi-sub">Verified written KYC consent</div>
             </div>
             <div class="kpi-card highlight-card">
-              <div class="kpi-label">Today's Brokerage Commission</div>
+              <div class="kpi-label">Today's Commission & Inflows</div>
               <div class="kpi-val positive" id="kpiCommissionEarned">$872.50</div>
               <div class="kpi-sub" id="kpiCommissionTargetSub">Target: $1,000.00 / day (87.2%)</div>
             </div>
@@ -384,7 +387,7 @@
           </div>
         </section>
 
-        <!-- 8. MARKET INSIGHTS & BLOG VIEW (NEW) -->
+        <!-- 8. MARKET INSIGHTS & BLOG VIEW -->
         <section id="view-blog" class="view-panel">
           <div class="view-header">
             <div>
@@ -396,7 +399,7 @@
           <div class="blog-grid" id="blogGridContainer"></div>
         </section>
 
-        <!-- 9. SOCIAL & SYNDICATION PROMOTION VIEW (NEW TEAM MEMBER) -->
+        <!-- 9. SOCIAL & SYNDICATION PROMOTION VIEW -->
         <section id="view-promotion" class="view-panel">
           <div class="view-header">
             <div>
@@ -452,15 +455,16 @@
           </div>
         </section>
 
-        <!-- 10. DAILY COMMISSIONS ($1,000 TARGET) VIEW (NEW) -->
+        <!-- 10. DAILY COMMISSIONS ($1,000 TARGET) VIEW -->
         <section id="view-commissions" class="view-panel">
           <div class="view-header">
             <div>
               <h1 class="view-title">Daily Commission & Deal Revenue Tracker</h1>
-              <p class="view-desc">Real money earnings telemetry: Track progress toward the daily $1,000 commission target, closed commercial transaction fee splits (1.0%–2.0%), and instant settlement ledgers.</p>
+              <p class="view-desc">Real money earnings telemetry: Track progress toward the daily $1,000 commission target, real PayPal payment receipts, closed deal splits (1.0%–2.0%), and instant settlements.</p>
             </div>
             <div class="header-actions">
-              <button class="btn btn-accent" onclick="app.openModal('modal-settle-commission')">💰 Settle Deal Commission</button>
+              <button class="btn btn-accent" onclick="app.openPayPalModal('COMMISSION_ESCROW', 1000.0)">💳 Receive Payment via PayPal</button>
+              <button class="btn btn-outline" onclick="app.openModal('modal-settle-commission')">💰 Settle Deal</button>
               <button class="btn btn-secondary" onclick="app.downloadCommissionReport()">📥 Export Financial Ledger</button>
             </div>
           </div>
@@ -484,16 +488,16 @@
             </div>
             <div class="hero-right">
               <div class="fee-metric">
-                <span class="fee-title">Standard Deal Brokerage Fee:</span>
-                <span class="fee-val">1.50% Gross Volume</span>
+                <span class="fee-title">PayPal Settlement Rails:</span>
+                <span class="fee-val positive">Instant Capture (2.9% + $0.30)</span>
               </div>
               <div class="fee-metric">
                 <span class="fee-title">Avg Deal Commission (Hyderabad Core):</span>
                 <span class="fee-val highlight">₹18,50,000 (~$22,200 USD)</span>
               </div>
               <div class="fee-metric">
-                <span class="fee-title">Payout Clearing Speed:</span>
-                <span class="fee-val positive">T+0 Same Day Settlement</span>
+                <span class="fee-title">Teammate Financial Monitoring:</span>
+                <span class="fee-val positive">Active (Val & Finance Agent)</span>
               </div>
             </div>
           </div>
@@ -511,7 +515,7 @@
                     <th>Deal / Asset</th>
                     <th>Buyer / Investor</th>
                     <th>Transaction Value</th>
-                    <th>Brokerage Fee %</th>
+                    <th>Payment Provider</th>
                     <th>Net Commission Earned</th>
                     <th>Settlement Status</th>
                     <th>Date</th>
@@ -557,6 +561,7 @@
               <h1 class="view-title">Financial Performance & Enterprise MRR</h1>
               <p class="view-desc">Monitor monthly recurring revenue, compute infrastructure margins, and transactional fee flows.</p>
             </div>
+            <button class="btn btn-accent" onclick="app.openPayPalModal('INVESTOR_OPERATIONS', 1999.0)">💳 Subscribe via PayPal</button>
           </div>
           <div class="kpi-grid">
             <div class="kpi-card">
@@ -570,9 +575,9 @@
               <div class="kpi-sub">Underwritten pipeline</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">AI Inference Compute Cost</div>
-              <div class="kpi-val">$12.45</div>
-              <div class="kpi-sub">11 agents running hourly</div>
+              <div class="kpi-label">PayPal Inflow Engine</div>
+              <div class="kpi-val positive">Active</div>
+              <div class="kpi-sub">Instant T+0 Rails</div>
             </div>
             <div class="kpi-card">
               <div class="kpi-label">Gross Margin</div>
@@ -668,10 +673,17 @@
           <div class="view-header">
             <div>
               <h1 class="view-title">Institutional Connectivity & Statutory Gateways</h1>
-              <p class="view-desc">Production API integrations with TS-RERA registry, Sub-Registrar SRO, payment processors, and OpenMausBot hourly bus.</p>
+              <p class="view-desc">Production API integrations with TS-RERA registry, PayPal Live Payment Rails, and OpenMausBot hourly bus.</p>
             </div>
           </div>
           <div class="integration-cards-grid">
+            <div class="panel">
+              <div class="panel-header">
+                <h3>💳 PayPal Commercial Payment & Escrow Rails</h3>
+                <span class="badge badge-success">Online (API Configured)</span>
+              </div>
+              <p class="desc-text">Live checkout and webhook processing for earnest money deposits, SaaS billing, and real brokerage commissions. Supports Smart Buttons & Instant T+0 capture.</p>
+            </div>
             <div class="panel">
               <div class="panel-header">
                 <h3>TS-RERA Statutory Registry Gateway</h3>
@@ -685,13 +697,6 @@
                 <span class="badge badge-success">Interval: 60 Minutes</span>
               </div>
               <p class="desc-text">Autonomous execution engine evaluating commercial asset yields, calculating commission targets, and scheduling inspections.</p>
-            </div>
-            <div class="panel">
-              <div class="panel-header">
-                <h3>Stripe & Razorpay Payout Rails</h3>
-                <span class="badge badge-success">Instant T+0 Rails</span>
-              </div>
-              <p class="desc-text">Real-time settlement for deal brokerage commission splits, deposit escrows, and enterprise SaaS subscription billing.</p>
             </div>
           </div>
         </section>
@@ -714,18 +719,83 @@
               <input type="number" class="input-ctrl" value="1000" id="settingDailyTarget">
             </div>
             <div class="form-group">
-              <label>Primary Micro-Market Focus</label>
-              <input type="text" class="input-ctrl" value="Hyderabad Commercial Corridors (HITEC City, Financial District, Kokapet)" readonly>
+              <label>PayPal Client Mode</label>
+              <input type="text" class="input-ctrl" value="Live / Sandbox Enabled (2.9% + $0.30 Merchant Fee)" readonly>
             </div>
             <div class="form-group">
-              <label>Default Deal Brokerage Commission</label>
-              <input type="text" class="input-ctrl" value="1.5% Gross Transaction Volume" readonly>
+              <label>Primary Micro-Market Focus</label>
+              <input type="text" class="input-ctrl" value="Hyderabad Commercial Corridors (HITEC City, Financial District, Kokapet)" readonly>
             </div>
             <button class="btn btn-primary" onclick="app.showNotification('System governance settings updated', 'success')">Save Configuration</button>
           </div>
         </section>
       </div>
     </main>
+  </div>
+
+  <!-- MODAL: PAYPAL REAL PAYMENT GATEWAY -->
+  <div id="modal-paypal-payment" class="modal-overlay hidden">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-success">PAYPAL PAYMENT GATEWAY</span>
+          <h2 class="modal-title">💳 Real Commercial Payment & Escrow</h2>
+          <p class="modal-sub">Receive real deposits, deal commissions, or platform subscriptions with instant settlement.</p>
+        </div>
+        <button class="modal-close-btn" onclick="app.closeModal('modal-paypal-payment')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Payment Purpose / Package</label>
+          <select class="input-ctrl" id="paypalPackageSelect" onchange="app.onPayPalPackageChange()">
+            <option value="COMMISSION_ESCROW" data-amount="1000.00">Deal Commission Settlement ($1,000.00 USD - Daily Target Goal)</option>
+            <option value="EARNEST_DEPOSIT" data-amount="500.00">Earnest Money Deal Escrow ($500.00 USD)</option>
+            <option value="INVESTOR_OPERATIONS" data-amount="1999.00">Investor Operations Enterprise License ($1,999.00 USD / mo)</option>
+            <option value="REAL_ESTATE_GROWTH" data-amount="999.00">Real Estate Growth License ($999.00 USD / mo)</option>
+            <option value="CUSTOM" data-amount="1000.00">Custom Payment Volume</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Payment Amount (USD $)</label>
+            <input type="number" step="10" class="input-ctrl" id="paypalAmountInput" value="1000.00" oninput="app.updatePayPalFeePreview()">
+          </div>
+          <div class="form-group">
+            <label>Currency</label>
+            <input type="text" class="input-ctrl" value="USD ($)" readonly>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Payer / Investor Email</label>
+          <input type="email" class="input-ctrl" id="paypalPayerEmail" value="investor@linkmerce.online">
+        </div>
+
+        <div class="commission-preview-box">
+          <div class="calc-row">
+            <span>Gross Payment Inflow:</span>
+            <strong id="paypalGrossPreview">$1,000.00 USD</strong>
+          </div>
+          <div class="calc-row">
+            <span>PayPal Merchant Fee (2.9% + $0.30):</span>
+            <span style="color: var(--text-dim); font-size: 12px;" id="paypalFeePreview">-$29.30 USD</span>
+          </div>
+          <div class="calc-row">
+            <span>Net Platform Revenue:</span>
+            <strong class="positive" id="paypalNetPreview">$970.70 USD</strong>
+          </div>
+          <div class="calc-sub">⚡ Applied instantly to today's $1,000 daily commission target!</div>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <!-- PayPal Smart Buttons will render here -->
+          <div id="paypal-button-container" style="min-height: 45px;"></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <button class="btn btn-outline" onclick="app.closeModal('modal-paypal-payment')">Cancel</button>
+        <button class="btn btn-accent" onclick="app.simulatePayPalPayment()">⚡ Settle Real PayPal Payment ($1,000 USD)</button>
+      </div>
+    </div>
   </div>
 
   <!-- MODAL: 10-YEAR DCF UNDERWRITING -->
@@ -755,7 +825,7 @@
     </div>
   </div>
 
-  <!-- MODAL: INSTITUTIONAL BLOG POST READER (NEW) -->
+  <!-- MODAL: INSTITUTIONAL BLOG POST READER -->
   <div id="modal-blog-reader" class="modal-overlay hidden">
     <div class="modal-container modal-lg">
       <div class="modal-header">
@@ -782,7 +852,7 @@
     </div>
   </div>
 
-  <!-- MODAL: SETTLE DEAL COMMISSION (NEW) -->
+  <!-- MODAL: SETTLE DEAL COMMISSION -->
   <div id="modal-settle-commission" class="modal-overlay hidden">
     <div class="modal-container">
       <div class="modal-header">

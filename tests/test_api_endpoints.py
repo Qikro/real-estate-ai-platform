@@ -11,11 +11,12 @@ def test_api_and_static_frontend():
     res_health = client.get("/api/health")
     assert res_health.status_code == 200
     assert res_health.json()["status"] == "HEALTHY"
+    assert res_health.json().get("paypal_gateway") == "ONLINE"
 
     # Static UI
     res_ui = client.get("/")
     assert res_ui.status_code == 200
-    assert "Real Estate AI Operations Platform" in res_ui.text
+    assert "Linkmerce Online" in res_ui.text
 
     # Login
     res_login = client.post("/api/auth/login", json={"email": "admin@estate.ai", "password": "Admin@123456"})
@@ -43,12 +44,60 @@ def test_api_and_static_frontend():
     assert res_reports.status_code == 200
     assert len(res_reports.json()) >= 1
 
-    # Agents
+    # Agents (11 specialized departments)
     res_agents = client.get("/api/agents", headers=headers)
     assert res_agents.status_code == 200
-    assert len(res_agents.json()["agents"]) >= 10
+    assert len(res_agents.json()["agents"]) >= 11
 
-    # Finance
+    # Finance Metrics
     res_fin = client.get("/api/finance/metrics", headers=headers)
     assert res_fin.status_code == 200
     assert res_fin.json()["status"] == "SUCCESS"
+    assert "paypal_integration" in res_fin.json()["metrics"]
+
+    # Blog API
+    res_blog = client.get("/api/blog")
+    assert res_blog.status_code == 200
+    assert len(res_blog.json()["posts"]) >= 3
+
+    # PayPal Config
+    res_paypal_cfg = client.get("/api/paypal/config")
+    assert res_paypal_cfg.status_code == 200
+    assert res_paypal_cfg.json()["status"] == "CONFIGURED"
+
+    # PayPal Create Order
+    res_paypal_create = client.post("/api/paypal/create-order", json={
+        "amount": 1000.0,
+        "currency": "USD",
+        "package_name": "COMMISSION_ESCROW",
+        "description": "Mindspace 12D Pre-Lease Commission Payout"
+    })
+    assert res_paypal_create.status_code == 200
+    order_id = res_paypal_create.json()["order_id"]
+    assert "PAYPAL-ORD-" in order_id
+
+    # PayPal Capture Order
+    res_paypal_capture = client.post("/api/paypal/capture-order", json={
+        "order_id": order_id,
+        "amount": 1000.0,
+        "currency": "USD",
+        "package_name": "COMMISSION_ESCROW",
+        "payer_email": "investor@linkmerce.online",
+        "payer_name": "Institutional Investor Desk"
+    })
+    assert res_paypal_capture.status_code == 200
+    assert res_paypal_capture.json()["status"] == "COMPLETED"
+    assert res_paypal_capture.json()["amount"] == 1000.0
+    assert res_paypal_capture.json()["net_payout_usd"] > 950.0
+
+    # PayPal Transactions
+    res_paypal_txs = client.get("/api/paypal/transactions")
+    assert res_paypal_txs.status_code == 200
+    assert res_paypal_txs.json()["count"] >= 1
+    assert res_paypal_txs.json()["total_volume_usd"] >= 1000.0
+
+    # Daily Commission Target Telemetry
+    res_comm_target = client.get("/api/finance/commission-target")
+    assert res_comm_target.status_code == 200
+    assert res_comm_target.json()["daily_target_usd"] == 1000.0
+    assert res_comm_target.json()["progress_percent"] == 100.0
