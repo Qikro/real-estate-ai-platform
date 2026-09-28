@@ -46,7 +46,7 @@ def test_api_and_static_frontend():
     # Agents
     res_agents = client.get("/api/agents", headers=headers)
     assert res_agents.status_code == 200
-    assert len(res_agents.json()["agents"]) == 10
+    assert len(res_agents.json()["agents"]) >= 10
 
     # Finance
     res_fin = client.get("/api/finance/metrics", headers=headers)

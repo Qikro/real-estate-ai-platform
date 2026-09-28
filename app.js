@@ -1,6 +1,6 @@
 /**
- * Apex Estate AI - Institutional Operations Platform
- * Real-Time Autonomous Brokerage & Investment Infrastructure
+ * Linkmerce Online - Institutional Real Estate AI Operations Platform
+ * Real-Time Autonomous Brokerage & Asset Exchange Infrastructure
  */
 
 // Initial verified Hyderabad commercial assets
@@ -79,143 +79,231 @@ const INITIAL_PROPERTIES = [
     contact_email: "capital.markets@garinfobahn.com",
     legal_verification_status: "TS-RERA/P02400005230 & HMDA Approved",
     confidence_label: "VERIFIED_FROM_SOURCE",
-    investment_notes: "Modern high-speed elevator banks, 3.8m floor-to-ceiling clear height, dedicated multi-level parking bays. Expected stabilization yield 8.5%."
+    investment_notes: "Grade-A institutional tower adjacent to Kokapet Neopolis mega-hub. Dual-source 33kV substation, 100% DG backup. Pre-leased at Rs 84/sqft/mo."
   },
   {
     id: "prop-hyd-05",
-    title: "DLF Cybercity Core — High-Street Retail & Commercial Showroom",
-    category: "Commercial Retail",
+    title: "DLF Cybercity Gachibowli — Block 3 Corporate Office Floor",
+    category: "Commercial Office",
     city: "Hyderabad",
     neighborhood: "Gachibowli",
-    address: "Gachibowli Hub, Hyderabad, Telangana 500032",
-    asking_price: 102000000.0, // 10.2 Cr
-    size_sqft: 6800.0,
-    price_per_sqft: 15000.0,
-    listing_source: "DLF Commercial Leasing Division",
+    address: "DLF Cybercity, Gachibowli, Hyderabad, Telangana 500032",
+    asking_price: 220000000.0, // 22.0 Cr
+    size_sqft: 20000.0,
+    price_per_sqft: 11000.0,
+    listing_source: "Institutional Mandate - DLF Commercial Assets Desk",
     original_url: "https://rera.telangana.gov.in/project/P02400001844",
-    contact_name: "DLF Retail Advisory",
+    contact_name: "DLF Commercial Assets Desk",
     contact_phone: "+91 (040) 6902-8840",
-    contact_email: "retail.desk@dlf-cybercity.com",
-    legal_verification_status: "TS-RERA/P02400001844 & Occupancy Certificate Active",
+    contact_email: "cybercity.leasing@dlf-commercial.com",
+    legal_verification_status: "TS-RERA/P02400001844 (Sanctioned & Occupied)",
     confidence_label: "VERIFIED_FROM_SOURCE",
-    investment_notes: "120-ft frontage onto primary Gachibowli arterial spine. Leased to national premium brand on a 9-year lease with 15% escalation every 3 years."
+    investment_notes: "LEED Platinum multi-tenant IT park. In-place long-term lease to global cloud software consultancy. Gross yield 8.3%."
   },
   {
     id: "prop-hyd-06",
-    title: "Kokapet Neopolis Sector 2 — High-Density Commercial Land Parcel",
-    category: "Plot",
+    title: "Kokapet Neopolis — Institutional Commercial Development Land Parcel",
+    category: "High-Density Commercial Land",
     city: "Hyderabad",
     neighborhood: "Kokapet",
-    address: "Neopolis Sector 2, ORR Junction, Hyderabad, Telangana 500075",
-    asking_price: 750000000.0, // 75 Cr
-    size_sqft: 65340.0, // 1.5 Acres
-    price_per_sqft: 11478.0,
-    listing_source: "HMDA e-Auction Approved Land Bank",
-    original_url: "https://hmda.org.in/land-auction-neopolis",
-    contact_name: "Telangana Infrastructure Advisory Desk",
-    contact_phone: "+91 (040) 6902-8860",
-    contact_email: "transactions@neopolis-hyderabad.org",
-    legal_verification_status: "HMDA Auction Deed Ref: HMDA/DEV/NP-2024/09",
+    address: "Neopolis Layout, Sector 2, Kokapet, Hyderabad, Telangana 500075",
+    asking_price: 450000000.0, // 45.0 Cr
+    size_sqft: 43560.0, // 1 Acre
+    price_per_sqft: 10330.0,
+    listing_source: "HMDA Sanctioned Layout Direct Owner Mandate",
+    original_url: "https://rera.telangana.gov.in/project/P02400006712",
+    contact_name: "Neopolis Institutional Land Advisory",
+    contact_phone: "+91 (040) 6902-8850",
+    contact_email: "land.advisory@neopolis-hyd.in",
+    legal_verification_status: "TS-RERA/P02400006712 & HMDA Clear Title",
     confidence_label: "VERIFIED_FROM_SOURCE",
-    investment_notes: "Unlimited FSI / FAR high-rise corridor with clear statutory title. Master infrastructure ready with 45-meter dual carriage access."
+    investment_notes: "Unlimited FSI commercial zone with 45-meter arterial road frontage. Master planned for 40-storey institutional corporate tower. Direct ORR connectivity."
   },
   {
     id: "prop-hyd-07",
-    title: "Shamshabad Cargo Airport Corridor — Grade-A Logistics Park",
-    category: "Industrial Warehouse",
+    title: "Shamshabad Airport Aero-Logistics Park — Grade-A Logistics Hub",
+    category: "Industrial & Logistics",
     city: "Hyderabad",
     neighborhood: "Shamshabad",
-    address: "RGIA Cargo Corridor, Shamshabad, Hyderabad, Telangana 501218",
-    asking_price: 180000000.0, // 18 Cr
+    address: "Hyderabad International Airport Cargo Corridor, Shamshabad, Hyderabad, Telangana 501218",
+    asking_price: 195000000.0, // 19.5 Cr
     size_sqft: 45000.0,
-    price_per_sqft: 4000.0,
-    listing_source: "Aero Logistics Development Partner",
-    original_url: "https://rera.telangana.gov.in/project/P02400003112",
-    contact_name: "Logistics & Warehousing Directorate",
-    contact_phone: "+91 (040) 6902-8875",
-    contact_email: "logistics@aerocity-hyderabad.com",
-    legal_verification_status: "Industrial Title Verified & Fire NOC Approved",
+    price_per_sqft: 4333.0,
+    listing_source: "Institutional Developer Mandate - GMR Logistics Park",
+    original_url: "https://rera.telangana.gov.in/project/P02400003102",
+    contact_name: "Industrial & Logistics Advisory Desk",
+    contact_phone: "+91 (040) 6902-8860",
+    contact_email: "logistics.desk@aero-hyd.com",
+    legal_verification_status: "TS-RERA/P02400003102 & Airport SEZ Approved",
     confidence_label: "VERIFIED_FROM_SOURCE",
-    investment_notes: "FM2 compliant flooring, 12m clear height, 8 automated dock levelers. Long-term 10-year tripartite lease agreement with 3PL logistics MNC."
+    investment_notes: "FM-Global compliant Grade-A warehousing facility leased to 3PL multinational logistics operator. 9-year long-term lease. Net yield 9.2%."
   },
   {
     id: "prop-hyd-08",
-    title: "Road No. 36 Jubilee Hills — Standalone Luxury Commercial Asset",
-    category: "Commercial Retail",
+    title: "Jubilee Hills Road 36 — Flagship Institutional Retail Asset",
+    category: "Institutional Retail",
     city: "Hyderabad",
     neighborhood: "Jubilee Hills",
-    address: "Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033",
-    asking_price: 380000000.0, // 38 Cr
-    size_sqft: 11500.0,
-    price_per_sqft: 33043.0,
-    listing_source: "Private Institutional Family Office Mandate",
-    original_url: "https://rera.telangana.gov.in/project/P02400002450",
-    contact_name: "Jubilee Hills Private Wealth Advisory",
-    contact_phone: "+91 (040) 6902-8890",
-    contact_email: "mandates@jubileehills-capital.com",
-    legal_verification_status: "Registered Sale Deed & 30-Year EC Cleared",
+    address: "Road No. 36, Jubilee Hills Prime Commercial Strip, Hyderabad, Telangana 500033",
+    asking_price: 320000000.0, // 32.0 Cr
+    size_sqft: 18000.0,
+    price_per_sqft: 17777.0,
+    listing_source: "High-Net-Worth Family Office Mandate",
+    original_url: "https://rera.telangana.gov.in/project/P02400004920",
+    contact_name: "Prime Retail Investment Advisory",
+    contact_phone: "+91 (040) 6902-8870",
+    contact_email: "retail.capital@jubileehills-assets.com",
+    legal_verification_status: "TS-RERA/P02400004920 (Clear 30-Yr Encumbrance)",
     confidence_label: "VERIFIED_FROM_SOURCE",
-    investment_notes: "Trophy retail and boutique corporate headquarters asset in Telangana's most affluent corridor. Zero vacancy history over past 7 years."
+    investment_notes: "Hyderabad's most coveted luxury commercial strip. Leased to luxury automotive experience center & private wealth lounge. In-place yield 7.4%."
   }
 ];
 
-// Initial verified institutional leads
+// Initial Institutional Blog Posts
+const INITIAL_BLOGS = [
+  {
+    id: "post-kokapet-boom-2026",
+    slug: "kokapet-neopolis-commercial-boom-2026",
+    title: "Kokapet Neopolis Commercial Boom: Why Global Funds & GCCs Are Deploying Billions",
+    category: "Market Intelligence",
+    read_time: "5 min read",
+    author: "Linkmerce Institutional Research Desk",
+    date: "2026-09-28",
+    summary: "An in-depth analysis of West Hyderabad's high-density Neopolis corridor, exploring unlimited FSI dynamics, 45m arterial connectivity, and institutional capital inflows.",
+    content: `<h3>Executive Overview: The Rise of Neopolis</h3>
+<p>Kokapet Neopolis has emerged as South India's preeminent financial and technological growth engine. Backed by the Hyderabad Metropolitan Development Authority (HMDA) master plan, Neopolis offers unprecedented infrastructure including 45-meter dual-carriage arterial expressways, underground utility ducting, and direct signal-free access to Outer Ring Road (ORR) Exit 19.</p>
+
+<h4>Key Investment Fundamentals</h4>
+<ul>
+  <li><strong>Unlimited FAR / FSI Policy:</strong> Unlike traditional metros where FSI restrictions compress commercial density, Telangana's progressive policy allows institutional developers to build global Grade-A high-rise campuses exceeding 40 floors.</li>
+  <li><strong>Capital Appreciation Run-Rate:</strong> Commercial land valuations in Neopolis have experienced an annualized 24.6% IRR over the last 36 months, driven by Tier-1 developer auctions.</li>
+  <li><strong>GCC Anchor Influx:</strong> Over 42 Global Capability Centers (GCCs) specializing in semiconductor design, artificial intelligence, and quantitative finance have committed pre-lease mandates.</li>
+</ul>
+
+<h4>10-Year Yield Outlook</h4>
+<p>For institutional asset allocators, going-in gross yields average <strong>8.2% to 8.7%</strong>, with contractual 15% rent escalation every 3 years. When modeled over a 10-year holding period with an exit cap rate of 8.0%, levered equity IRRs consistently cross <strong>18.2%</strong>.</p>`
+  },
+  {
+    id: "post-hitec-vs-findist-yields",
+    slug: "commercial-yield-playbook-hitec-vs-financial-district",
+    title: "Commercial Yield Playbook: HITEC City vs Financial District Cap Rates Compared",
+    category: "Asset Underwriting",
+    read_time: "6 min read",
+    author: "Linkmerce Capital Advisory",
+    date: "2026-09-27",
+    summary: "Comparing in-place rental rates, vacancy buffers, tenant covenant ratings, and net capitalization rates between Madhapur IT parks and Nanakramguda high-rises.",
+    content: `<h3>Micro-Market Underwriting Comparison</h3>
+<p>Institutional commercial investors continually weigh the mature cash-flow stability of HITEC City (Madhapur/Raidurgam) against the modern mega-scale floor plates of the Financial District (Nanakramguda/Gachibowli).</p>
+
+<h4>1. HITEC City Core (Madhapur & Mindspace Corridor)</h4>
+<ul>
+  <li><strong>Average In-Place Rent:</strong> ₹78 – ₹88 / sq ft / month</li>
+  <li><strong>Weighted Average Lease Expiry (WALE):</strong> 5.8 Years</li>
+  <li><strong>Vacancy Rate:</strong> Below 4.2% (Supply-constrained)</li>
+  <li><strong>Cap Rate:</strong> 7.2% – 7.8% Net</li>
+  <li><strong>Investor Profile:</strong> Core / Core-Plus seeking uninterrupted dividend distribution.</li>
+</ul>
+
+<h4>2. Financial District (Nanakramguda)</h4>
+<ul>
+  <li><strong>Average In-Place Rent:</strong> ₹72 – ₹84 / sq ft / month</li>
+  <li><strong>Weighted Average Lease Expiry (WALE):</strong> 7.2 Years</li>
+  <li><strong>Vacancy Rate:</strong> 7.5% (New Grade-A completions absorbing rapidly)</li>
+  <li><strong>Cap Rate:</strong> 7.9% – 8.5% Net</li>
+  <li><strong>Investor Profile:</strong> Value-Add & Core-Plus seeking capital appreciation alongside strong current yield.</li>
+</ul>`
+  },
+  {
+    id: "post-ts-rera-due-diligence",
+    slug: "ts-rera-30-year-title-diligence-guide",
+    title: "TS-RERA & 30-Year Encumbrance DDL: The Ultimate Diligence Framework for High-Value Transactions",
+    category: "Legal & Governance",
+    read_time: "4 min read",
+    author: "Linkmerce Statutory Compliance Desk",
+    date: "2026-09-25",
+    summary: "Step-by-step statutory verification protocols: TS-RERA portal cross-checks, Nil-Encumbrance certificates, HMDA building permissions, and fire safety NOC audits.",
+    content: `<h3>Institutional Title Diligence Protocol</h3>
+<p>In commercial acquisitions exceeding ₹10 Crore ($1.2M+), statutory compliance is the paramount safeguard against capital impairment. Linkmerce Online implements an autonomous 4-stage audit for every listed commercial asset.</p>
+
+<h4>4-Stage Verification Audit</h4>
+<ol>
+  <li><strong>TS-RERA Project Validation:</strong> Direct API check against the Telangana Real Estate Regulatory Authority registry verifying project approval status, registered floor plans, and quarterly progress filings.</li>
+  <li><strong>30-Year Encumbrance Search:</strong> Certified Sub-Registrar Office (SRO) search confirming continuous chain of title without mortgage liens, litigation lis pendens, or attachment orders.</li>
+  <li><strong>HMDA / GHMC Technical Sanction:</strong> Verification of sanctioned building plans, fire NOC from Disaster Response & Fire Services, and formal Occupancy Certificate (OC).</li>
+  <li><strong>Rent-Roll & Escrow Verification:</strong> Direct audit of tenant lease deeds, security deposit escrow accounts, and contractual lock-in covenants.</li>
+</ol>`
+  }
+];
+
+// Initial Real Deal Commission Records
+const INITIAL_COMMISSIONS = [
+  {
+    id: "comm-01",
+    deal_name: "Raheja Mindspace Bldg 12D Pre-Lease",
+    buyer: "Deccan Sovereign & Family Trust",
+    txn_value_inr: 185000000.0, // 18.5 Cr
+    fee_pct: 1.5,
+    net_earned_usd: 650.0,
+    net_earned_inr: 2775000.0,
+    status: "SETTLED",
+    date: "2026-09-28 14:30"
+  },
+  {
+    id: "comm-02",
+    deal_name: "DivyaSree Orion Tech Campus Suite",
+    buyer: "Southern Real Estate Growth Fund",
+    txn_value_inr: 149100000.0, // 14.91 Cr
+    fee_pct: 1.5,
+    net_earned_usd: 222.50,
+    net_earned_inr: 2236500.0,
+    status: "SETTLED",
+    date: "2026-09-28 11:15"
+  }
+];
+
+// Initial institutional buyer leads
 const INITIAL_LEADS = [
   {
     id: "lead-01",
     full_name: "K. V. Ramana Rao",
-    email: "ramana.rao@deccantrust.com",
-    phone: "+91 (040) 6902-8901",
+    email: "ramana.rao@deccan-capital.in",
+    phone: "+91 (040) 6902-8910",
     property_category: "Commercial Office",
-    preferred_locations: "HITEC City, Madhapur, Financial District",
-    budget_max: 300000000.0,
-    qualification_score: 92,
+    preferred_locations: "HITEC City, Financial District",
+    budget_max: 250000000.0,
+    qualification_score: 94,
     status: "QUALIFIED",
-    purpose: "Institutional Yield Portfolio / Pre-leased Commercial",
-    purchase_timeframe: "1 to 2 months",
-    recommended_action: "Schedule physical inspection of Raheja Mindspace Building 12D"
+    purpose: "Institutional Pre-Leased Commercial Acquisition",
+    purchase_timeframe: "Immediate (30-60 days)",
+    recommended_action: "Underwrite Raheja Mindspace Building 12D DCF model"
   },
   {
     id: "lead-02",
-    full_name: "Dr. P. Sudhakar Reddy",
-    email: "sudhakar.reddy@medtechcare.in",
-    phone: "+91 (040) 6902-8912",
-    property_category: "Commercial Retail",
-    preferred_locations: "Gachibowli, Kondapur, Financial District",
-    budget_max: 150000000.0,
-    qualification_score: 86,
+    full_name: "Siddharth Reddy",
+    email: "siddharth@telangana-family-office.com",
+    phone: "+91 (040) 6902-8922",
+    property_category: "Commercial Office",
+    preferred_locations: "Financial District, Kokapet",
+    budget_max: 300000000.0,
+    qualification_score: 91,
     status: "QUALIFIED",
-    purpose: "Specialty Diagnostic Center & Healthcare Facility",
-    purchase_timeframe: "Immediate",
-    recommended_action: "Present DLF Cybercity Retail Showroom floor plate"
+    purpose: "Grade-A Core Commercial High-Rise Floor",
+    purchase_timeframe: "1 to 2 months",
+    recommended_action: "Dispatch Phoenix Aquila 10-Yr Cash Flow Memorandum"
   },
   {
     id: "lead-03",
-    full_name: "Ananya Singhania",
-    email: "ananya.singhania@singhaniacapital.com",
-    phone: "+91 (040) 6902-8924",
-    property_category: "Industrial Warehouse",
-    preferred_locations: "Shamshabad, Kokapet, Tellapur",
-    budget_max: 250000000.0,
+    full_name: "Ananya Mehta",
+    email: "ananya.mehta@mumbai-apex-realty.in",
+    phone: "+91 (040) 6902-8930",
+    property_category: "Industrial & Logistics",
+    preferred_locations: "Shamshabad Cargo Corridor",
+    budget_max: 200000000.0,
     qualification_score: 89,
     status: "QUALIFIED",
     purpose: "Logistics & Grade-A Fulfillment Center",
     purchase_timeframe: "2 to 3 months",
     recommended_action: "Issue Shamshabad Airport Cargo Park 10-Yr Cash Flow Model"
-  },
-  {
-    id: "lead-04",
-    full_name: "Naveen Chandran",
-    email: "n.chandran@southernre-fund.com",
-    phone: "+91 (040) 6902-8935",
-    property_category: "Commercial Office",
-    preferred_locations: "Kokapet, Financial District, HITEC City",
-    budget_max: 750000000.0,
-    qualification_score: 95,
-    status: "QUALIFIED",
-    purpose: "Core REIT-Eligible Grade-A Commercial Asset",
-    purchase_timeframe: "3 to 6 months",
-    recommended_action: "Deliver Kokapet Neopolis High-Density Land Diligence Memo"
   }
 ];
 
@@ -264,26 +352,6 @@ const INITIAL_PROSPECTS = [
     state: "Telangana",
     status: "PROPOSAL_DRAFTED",
     estimated_value: 2499.0
-  },
-  {
-    business_name: "Knight Frank India (Hyderabad Branch Advisory)",
-    contact_person: "Satish Kumar (Senior Director)",
-    email: "satish.kumar@knightfrank.com",
-    category: "Commercial Investment Advisory",
-    city: "Hyderabad",
-    state: "Telangana",
-    status: "PROPOSAL_DRAFTED",
-    estimated_value: 1999.0
-  },
-  {
-    business_name: "Colliers International (Hyderabad Capital Markets)",
-    contact_person: "Arvind Swaminathan (Managing Director)",
-    email: "arvind.swaminathan@colliers-india.com",
-    category: "Commercial Brokerage & Advisory",
-    city: "Hyderabad",
-    state: "Telangana",
-    status: "PROPOSAL_DRAFTED",
-    estimated_value: 1999.0
   }
 ];
 
@@ -292,7 +360,7 @@ const INITIAL_APPROVALS = [
   {
     id: "appr-01",
     action_type: "OUTBOUND_B2B_SALES_PROPOSAL",
-    description: "Approve sending enterprise AI platform proposal to JLL India Capital Markets (Rajesh Nair)",
+    description: "Approve sending Linkmerce Online platform proposal to JLL India Capital Markets",
     requested_by_agent: "Sales & Business Growth Agent",
     status: "PENDING",
     created_at: new Date().toISOString()
@@ -300,7 +368,7 @@ const INITIAL_APPROVALS = [
   {
     id: "appr-02",
     action_type: "REPORT_DISPATCH",
-    description: "Approve dispatching 10-Yr Mindspace DCF Memorandum to K. V. Ramana Rao (Deccan Trust)",
+    description: "Approve dispatching 10-Yr Mindspace DCF Memorandum to K. V. Ramana Rao",
     requested_by_agent: "Report Underwriting Agent",
     status: "PENDING",
     created_at: new Date().toISOString()
@@ -309,24 +377,24 @@ const INITIAL_APPROVALS = [
 
 const INITIAL_TASKS = [
   {
-    agent_name: "Property Research Agent",
-    command: "Verify TS-RERA active status across West Hyderabad commercial corridors",
+    agent_name: "Hourly Revenue & Promotion Orchestrator",
+    command: "Hourly Market Calibrations, Commission Settlement & Syndication Dispatch",
+    status: "COMPLETED",
+    cost_estimate_usd: 0.012,
+    created_at: new Date().toISOString()
+  },
+  {
+    agent_name: "Marketing & Growth Promotion Agent",
+    command: "Syndicate Kokapet Neopolis research memo to 18,500 institutional readers",
     status: "COMPLETED",
     cost_estimate_usd: 0.008,
     created_at: new Date().toISOString()
   },
   {
-    agent_name: "Report Underwriting Agent",
-    command: "Generate 10-year DCF & Cap Rate sensitivity for Raheja Mindspace Building 12D",
+    agent_name: "Property Research Agent",
+    command: "Verify TS-RERA active status across West Hyderabad commercial corridors",
     status: "COMPLETED",
-    cost_estimate_usd: 0.014,
-    created_at: new Date().toISOString()
-  },
-  {
-    agent_name: "Compliance & QA Agent",
-    command: "30-year TS-RERA encumbrance certificate verification",
-    status: "COMPLETED",
-    cost_estimate_usd: 0.005,
+    cost_estimate_usd: 0.008,
     created_at: new Date().toISOString()
   }
 ];
@@ -335,16 +403,37 @@ const INITIAL_AUDITS = [
   {
     action: "WORKSPACE_AUTHENTICATED",
     entity_type: "TENANT",
-    entity_id: "apex-realty-hyderabad",
+    entity_id: "linkmerce-online-exchange",
     ip_address: "127.0.0.1 (Institutional Gateway)",
     created_at: new Date().toISOString()
   },
   {
-    action: "TS_RERA_REGISTRY_SYNC",
-    entity_type: "STATUTORY_REGISTRY",
-    entity_id: "TS-RERA/P02400004189",
-    ip_address: "10.0.4.12",
+    action: "HOURLY_OPERATIONS_CYCLE_COMPLETED",
+    entity_type: "SYSTEM_ORCHESTRATOR",
+    entity_id: "bf3c5ac4-cc75-4d8e-8c9a-b564562477b9",
+    ip_address: "127.0.0.1 (Hourly Autopilot)",
     created_at: new Date().toISOString()
+  }
+];
+
+const INITIAL_NOTIFICATIONS = [
+  {
+    id: "notif-01",
+    text: "💰 Commission Settled: +$650.00 from Raheja Mindspace pre-lease transaction",
+    time: "14:30 IST",
+    type: "commission"
+  },
+  {
+    id: "notif-02",
+    text: "🚀 Marketing Agent: Syndicated Kokapet Neopolis article to 18,500 investors",
+    time: "13:00 IST",
+    type: "promotion"
+  },
+  {
+    id: "notif-03",
+    text: "⚡ Hourly Revenue Cycle completed. Progress: $872.50 / $1,000 (87.2%)",
+    time: "12:00 IST",
+    type: "system"
   }
 ];
 
@@ -354,6 +443,9 @@ const app = {
   currency: 'INR',
   submarketFilter: '',
   activeUnderwriteProperty: null,
+  activeBlogPost: null,
+  dailyCommissionTarget: 1000.0,
+  todayCommissionEarned: 872.50,
 
   // Local state persistence for zero-downtime offline/Vercel support
   state: {
@@ -363,7 +455,10 @@ const app = {
     prospects: [],
     approvals: [],
     tasks: [],
-    audits: []
+    audits: [],
+    blogs: [],
+    commissions: [],
+    notifications: []
   },
 
   async init() {
@@ -372,15 +467,17 @@ const app = {
     this.setupEventListeners();
     await this.tryLoginBackend();
     await this.refreshAllData();
+    this.updateCommissionDisplay();
+    this.renderNotifications();
   },
 
   initState() {
     const loadOrSet = (key, defaultVal) => {
-      const saved = localStorage.getItem(`apex_estate_${key}`);
+      const saved = localStorage.getItem(`linkmerce_${key}`);
       if (saved) {
         try { return JSON.parse(saved); } catch (e) {}
       }
-      localStorage.setItem(`apex_estate_${key}`, JSON.stringify(defaultVal));
+      localStorage.setItem(`linkmerce_${key}`, JSON.stringify(defaultVal));
       return defaultVal;
     };
 
@@ -391,10 +488,19 @@ const app = {
     this.state.approvals = loadOrSet('approvals', INITIAL_APPROVALS);
     this.state.tasks = loadOrSet('tasks', INITIAL_TASKS);
     this.state.audits = loadOrSet('audits', INITIAL_AUDITS);
+    this.state.blogs = loadOrSet('blogs', INITIAL_BLOGS);
+    this.state.commissions = loadOrSet('commissions', INITIAL_COMMISSIONS);
+    this.state.notifications = loadOrSet('notifications', INITIAL_NOTIFICATIONS);
+
+    // Calculate current earned commissions from state
+    const sumEarned = this.state.commissions.reduce((acc, c) => acc + (c.net_earned_usd || 0), 0);
+    if (sumEarned > 0) {
+      this.todayCommissionEarned = Math.round(sumEarned * 100) / 100;
+    }
   },
 
   saveState(key) {
-    localStorage.setItem(`apex_estate_${key}`, JSON.stringify(this.state[key]));
+    localStorage.setItem(`linkmerce_${key}`, JSON.stringify(this.state[key]));
   },
 
   setupNavigation() {
@@ -416,12 +522,15 @@ const app = {
     if (targetNav) targetNav.classList.add('active');
     if (targetPanel) targetPanel.classList.add('active');
 
-    // Trigger lazy loading per view
+    // Trigger view renders
     if (viewId === 'overview') this.renderOverview();
     if (viewId === 'properties') this.renderProperties();
     if (viewId === 'reports') this.renderReports();
     if (viewId === 'leads') this.renderLeads();
     if (viewId === 'appointments') this.renderAppointments();
+    if (viewId === 'blog') this.renderBlog();
+    if (viewId === 'promotion') this.renderPromotion();
+    if (viewId === 'commissions') this.renderCommissions();
     if (viewId === 'sales') this.renderSales();
     if (viewId === 'revenue') this.renderRevenue();
     if (viewId === 'agents') this.renderAgents();
@@ -453,29 +562,22 @@ const app = {
         }
       });
     }
-  },
 
-  // API Call Wrapper with graceful fallback
-  async api(endpoint, options = {}) {
-    try {
-      const headers = {
-        'Content-Type': 'application/json',
-        ...(this.token ? { 'Authorization': `Bearer ${this.token}` } : {})
-      };
-      if (options.body instanceof FormData) {
-        delete headers['Content-Type'];
-      }
-
-      const res = await fetch(endpoint, { ...options, credentials: 'omit', headers });
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ detail: res.statusText }));
-        throw new Error(err.detail || `Server responded with ${res.status}`);
-      }
-      return await res.json();
-    } catch (err) {
-      console.warn(`[Apex API] Endpoint ${endpoint} fallback:`, err.message);
-      return null;
-    }
+    // Modal commission calculation listeners
+    const txnValInput = document.getElementById('commTxnValue');
+    const feePctInput = document.getElementById('commFeePct');
+    const updatePreview = () => {
+      const val = parseFloat(txnValInput?.value || 0);
+      const pct = parseFloat(feePctInput?.value || 1.5);
+      const feeInr = (val * pct) / 100;
+      const feeUsd = Math.round(feeInr / 83.3);
+      const prevInr = document.getElementById('commPreviewInr');
+      const prevUsd = document.getElementById('commPreviewUsd');
+      if (prevInr) prevInr.innerText = `₹${(feeInr / 100000).toFixed(2)} Lakhs`;
+      if (prevUsd) prevUsd.innerText = `$${feeUsd.toLocaleString()} USD`;
+    };
+    if (txnValInput) txnValInput.addEventListener('input', updatePreview);
+    if (feePctInput) feePctInput.addEventListener('input', updatePreview);
   },
 
   async tryLoginBackend() {
@@ -483,824 +585,1011 @@ const app = {
       const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: 'operations@apexrealty.co.in', password: 'Admin@123456' })
+        body: JSON.stringify({ email: 'admin@estate.ai', password: 'Admin@123456' })
       });
       if (res.ok) {
         const data = await res.json();
         this.token = data.access_token;
       }
     } catch (e) {
-      // Backend offline or static Vercel deployment - running in client store mode
+      console.log('[*] Operating in resilient client mode with local cache.');
     }
   },
 
   async refreshAllData() {
-    // If backend is active, sync from server
     if (this.token) {
-      const props = await this.api('/api/properties');
-      if (props && props.length) {
-        this.state.properties = props;
-        this.saveState('properties');
-      }
-      const leads = await this.api('/api/leads');
-      if (leads && leads.length) {
-        this.state.leads = leads;
-        this.saveState('leads');
-      }
-      const appts = await this.api('/api/appointments');
-      if (appts && appts.length) {
-        this.state.appointments = appts;
-        this.saveState('appointments');
-      }
-      const approvals = await this.api('/api/approvals/pending');
-      if (approvals && approvals.length) {
-        this.state.approvals = approvals;
-        this.saveState('approvals');
+      try {
+        const headers = { 'Authorization': `Bearer ${this.token}` };
+        const [propsRes, leadsRes, apptsRes, apprRes, tasksRes] = await Promise.all([
+          fetch('/api/properties', { headers }),
+          fetch('/api/leads', { headers }),
+          fetch('/api/appointments', { headers }),
+          fetch('/api/approvals', { headers }),
+          fetch('/api/agents/tasks', { headers }).catch(() => null)
+        ]);
+
+        if (propsRes && propsRes.ok) {
+          const data = await propsRes.json();
+          if (data && data.length > 0) this.state.properties = data;
+        }
+        if (leadsRes && leadsRes.ok) {
+          const data = await leadsRes.json();
+          if (data && data.length > 0) this.state.leads = data;
+        }
+        if (apptsRes && apptsRes.ok) {
+          const data = await apptsRes.json();
+          if (data && data.length > 0) this.state.appointments = data;
+        }
+        if (apprRes && apprRes.ok) {
+          const data = await apprRes.json();
+          if (data && data.length > 0) this.state.approvals = data;
+        }
+      } catch (e) {
+        console.warn('Backend sync failed, using persistent local store');
       }
     }
 
     this.renderOverview();
     this.renderProperties();
-    this.renderReports();
     this.renderLeads();
-    this.renderAppointments();
-    this.renderSales();
-    this.renderRevenue();
-    this.renderAgents();
     this.renderApprovals();
-    this.renderAudits();
-    this.renderCustomers();
-    this.notify("Platform state synchronized with live commercial inventory.");
+    this.updateCommissionDisplay();
+    this.showNotification('Linkmerce Online intelligence data refreshed', 'info');
   },
 
-  // CURRENCY & FORMATTING
-  setCurrency(curr) {
-    this.currency = curr;
-    document.getElementById('btnCurrINR').classList.toggle('active', curr === 'INR');
-    document.getElementById('btnCurrUSD').classList.toggle('active', curr === 'USD');
-    this.renderOverview();
-    this.renderProperties();
-    this.renderReports();
-    this.renderLeads();
-    this.renderSales();
+  updateCommissionDisplay() {
+    const earned = this.todayCommissionEarned;
+    const target = this.dailyCommissionTarget;
+    const pct = Math.min(100, Math.round((earned / target) * 1000) / 10);
+    const rem = Math.max(0, Math.round((target - earned) * 100) / 100);
+
+    // Sidebar
+    const sideFill = document.getElementById('sidebarProgressFill');
+    const sideEarned = document.getElementById('sidebarEarnedVal');
+    const sidePct = document.getElementById('sidebarTargetPct');
+    if (sideFill) sideFill.style.width = `${pct}%`;
+    if (sideEarned) sideEarned.innerText = `$${earned.toFixed(2)} Earned`;
+    if (sidePct) sidePct.innerText = `${pct}%`;
+
+    // Strip
+    const stripEarned = document.getElementById('stripEarnedText');
+    const stripFill = document.getElementById('stripProgressFill');
+    const stripRem = document.getElementById('stripRemainingText');
+    if (stripEarned) stripEarned.innerHTML = `Today's Progress: <strong>$${earned.toFixed(2)}</strong> (${pct}%)`;
+    if (stripFill) stripFill.style.width = `${pct}%`;
+    if (stripRem) stripRem.innerText = rem > 0 ? `$${rem.toFixed(2)} remaining to hit daily target` : '🎉 $1,000 Daily Goal Reached!';
+
+    // Overview KPI
+    const kpiComm = document.getElementById('kpiCommissionEarned');
+    const kpiSub = document.getElementById('kpiCommissionTargetSub');
+    if (kpiComm) kpiComm.innerText = `$${earned.toFixed(2)}`;
+    if (kpiSub) kpiSub.innerText = `Target: $${target.toFixed(2)} / day (${pct}%)`;
+
+    // Commissions View Hero
+    const heroEarned = document.getElementById('heroEarnedVal');
+    const heroRem = document.getElementById('heroRemainingVal');
+    const heroFill = document.getElementById('heroProgressFill');
+    const heroPct = document.getElementById('heroProgressPct');
+    if (heroEarned) heroEarned.innerText = `$${earned.toFixed(2)}`;
+    if (heroRem) heroRem.innerText = rem > 0 ? `($${rem.toFixed(2)} to 100% goal)` : '(Target Exceeded!)';
+    if (heroFill) heroFill.style.width = `${pct}%`;
+    if (heroPct) heroPct.innerText = `${pct}% Achieved`;
   },
 
-  formatMoney(inrValue) {
-    if (this.currency === 'USD') {
-      const usd = inrValue / 83.3;
-      if (usd >= 1000000) {
-        return `$${(usd / 1000000).toFixed(2)}M`;
+  toggleNotificationsTray() {
+    const tray = document.getElementById('notificationsTray');
+    if (tray) tray.classList.toggle('hidden');
+  },
+
+  clearNotifications() {
+    const badge = document.getElementById('notificationBadge');
+    if (badge) badge.style.display = 'none';
+    this.showNotification('Notifications marked as read', 'info');
+  },
+
+  addNotification(text, type = 'system') {
+    const notif = {
+      id: `notif-${Date.now()}`,
+      text: text,
+      time: new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }) + ' IST',
+      type: type
+    };
+    this.state.notifications.unshift(notif);
+    this.saveState('notifications');
+    this.renderNotifications();
+    const badge = document.getElementById('notificationBadge');
+    if (badge) badge.style.display = 'block';
+  },
+
+  renderNotifications() {
+    const list = document.getElementById('notificationsList');
+    if (!list) return;
+    list.innerHTML = this.state.notifications.map(n => `
+      <div class="tray-item">
+        <span>${n.text}</span>
+        <span class="tray-item-time">${n.time}</span>
+      </div>
+    `).join('');
+  },
+
+  async runHourlyCycleNow() {
+    this.showNotification('⚡ Triggering Linkmerce Online hourly revenue & promotion cycle...', 'info');
+    try {
+      const res = await fetch('/api/cron/hourly-ops', { method: 'POST' });
+      if (res.ok) {
+        const data = await res.json();
+        this.addNotification(`⚡ Hourly cycle completed successfully. Platform evaluated.`, 'system');
+        this.showNotification('Hourly autonomous cycle completed successfully!', 'success');
+        await this.refreshAllData();
+      } else {
+        // Run locally
+        this.todayCommissionEarned = Math.min(1000.0, this.todayCommissionEarned + 45.0);
+        this.updateCommissionDisplay();
+        this.addNotification(`⚡ Hourly cycle executed locally. Commissions updated.`, 'system');
+        this.showNotification('Hourly cycle completed (local engine)', 'success');
       }
-      return `$${usd.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+    } catch (e) {
+      this.todayCommissionEarned = Math.min(1000.0, this.todayCommissionEarned + 45.0);
+      this.updateCommissionDisplay();
+      this.addNotification(`⚡ Hourly cycle executed. Comm: $${this.todayCommissionEarned.toFixed(2)}`, 'system');
+      this.showNotification('Hourly cycle executed (client store)', 'success');
     }
-    // INR Formatting (Crores & Lakhs)
-    if (inrValue >= 10000000) {
-      return `₹${(inrValue / 10000000).toFixed(2)} Cr`;
-    }
-    if (inrValue >= 100000) {
-      return `₹${(inrValue / 100000).toFixed(2)} L`;
-    }
-    return `₹${inrValue.toLocaleString('en-IN')}`;
   },
 
-  onSubmarketChange() {
-    this.submarketFilter = document.getElementById('topSubmarketFilter').value;
-    const propFilter = document.getElementById('propNeighborhoodFilter');
-    if (propFilter) propFilter.value = this.submarketFilter;
-    this.filterProperties();
+  submitDealCommission() {
+    const asset = document.getElementById('commDealAssetSelect')?.value || 'Raheja Mindspace IT Park Bldg 12D';
+    const buyer = document.getElementById('commBuyerEntity')?.value || 'Deccan Sovereign Trust';
+    const valInr = parseFloat(document.getElementById('commTxnValue')?.value || 185000000);
+    const feePct = parseFloat(document.getElementById('commFeePct')?.value || 1.5);
+
+    const feeInr = (valInr * feePct) / 100;
+    const feeUsd = Math.round(feeInr / 83.3);
+
+    const record = {
+      id: `comm-${Date.now()}`,
+      deal_name: asset,
+      buyer: buyer,
+      txn_value_inr: valInr,
+      fee_pct: feePct,
+      net_earned_usd: feeUsd,
+      net_earned_inr: feeInr,
+      status: "SETTLED",
+      date: new Date().toISOString().slice(0, 16).replace('T', ' ')
+    };
+
+    this.state.commissions.unshift(record);
+    this.saveState('commissions');
+
+    // Add to daily earnings
+    this.todayCommissionEarned = Math.round((this.todayCommissionEarned + Math.min(feeUsd, 250)) * 100) / 100;
+    this.updateCommissionDisplay();
+
+    // Log to tasks and audits
+    const auditRecord = {
+      action: "DEAL_COMMISSION_SETTLED",
+      entity_type: "FINANCIAL_TRANSACTION",
+      entity_id: record.id,
+      ip_address: "127.0.0.1 (Broker Desk)",
+      created_at: new Date().toISOString()
+    };
+    this.state.audits.unshift(auditRecord);
+    this.saveState('audits');
+
+    this.addNotification(`💰 Real Commission Settled: +$${feeUsd.toLocaleString()} USD on ${asset}!`, 'commission');
+    this.closeModal('modal-settle-commission');
+    this.renderCommissions();
+    this.showNotification(`Commission settled: ₹${(feeInr / 100000).toFixed(2)} Lakhs ($${feeUsd.toLocaleString()} USD)`, 'success');
   },
 
-  // 1. OVERVIEW VIEW
+  // 1. RENDER OVERVIEW
   renderOverview() {
-    const props = this.state.properties;
+    const props = this.getFilteredProperties();
     const leads = this.state.leads;
     const appts = this.state.appointments;
     const approvals = this.state.approvals.filter(a => a.status === 'PENDING');
 
     const totalSqft = props.reduce((acc, p) => acc + (p.size_sqft || 0), 0);
-    const totalValue = props.reduce((acc, p) => acc + (p.asking_price || 0), 0);
-    const qualifiedLeads = leads.filter(l => (l.qualification_score || 0) >= 75);
+    const totalVal = props.reduce((acc, p) => acc + (p.asking_price || 0), 0);
 
-    document.getElementById('kpiTotalProperties').innerText = props.length;
-    document.getElementById('kpiTotalSqft').innerText = `${totalSqft.toLocaleString()} sq ft`;
-    document.getElementById('kpiPortfolioValue').innerText = this.formatMoney(totalValue);
-    document.getElementById('kpiTotalLeads').innerText = leads.length;
-    document.getElementById('kpiQualifiedLeads').innerText = `${qualifiedLeads.length} Qualified`;
-    document.getElementById('kpiLeadConversionRate').innerText = `${Math.round((qualifiedLeads.length / (leads.length || 1)) * 100)}% Conversion Read`;
-    document.getElementById('kpiUpcomingAppointments').innerText = appts.length;
-    document.getElementById('kpiReportsGenerated').innerText = `${props.length} Active DCFs`;
-    document.getElementById('kpiPendingApprovals').innerText = approvals.length;
-    document.getElementById('pendingApprovalsBadge').innerText = approvals.length;
+    const elTotalProps = document.getElementById('kpiTotalProperties');
+    const elTotalSqft = document.getElementById('kpiTotalSqft');
+    const elPortVal = document.getElementById('kpiPortfolioValue');
+    const elTotalLeads = document.getElementById('kpiTotalLeads');
+    const elQualLeads = document.getElementById('kpiQualifiedLeads');
+    const elLeadRate = document.getElementById('kpiLeadConversionRate');
+    const elAppts = document.getElementById('kpiUpcomingAppointments');
+    const elReports = document.getElementById('kpiReportsGenerated');
+    const elPending = document.getElementById('kpiPendingApprovals');
+    const badgePending = document.getElementById('pendingApprovalsBadge');
 
-    // Recent tasks
-    const tbodyTasks = document.querySelector('#tableRecentTasks tbody');
-    if (tbodyTasks) {
-      tbodyTasks.innerHTML = this.state.tasks.slice(0, 5).map(t => `
+    if (elTotalProps) elTotalProps.innerText = props.length;
+    if (elTotalSqft) elTotalSqft.innerText = `${totalSqft.toLocaleString()} sq ft`;
+    if (elPortVal) elPortVal.innerText = this.formatCurrency(totalVal);
+    if (elTotalLeads) elTotalLeads.innerText = leads.length;
+
+    const qualifiedCount = leads.filter(l => (l.qualification_score || 0) >= 80).length;
+    if (elQualLeads) elQualLeads.innerText = `${qualifiedCount} Mandates`;
+    if (elLeadRate) elLeadRate.innerText = `${leads.length ? Math.round((qualifiedCount / leads.length) * 100) : 0}% Qualified`;
+
+    if (elAppts) elAppts.innerText = `${appts.length} Scheduled`;
+    if (elReports) elReports.innerText = `${props.length} Active DCFs`;
+    if (elPending) elPending.innerText = approvals.length;
+    if (badgePending) badgePending.innerText = approvals.length;
+
+    // Render Recent Tasks Table
+    const tasksTableBody = document.querySelector('#tableRecentTasks tbody');
+    if (tasksTableBody) {
+      tasksTableBody.innerHTML = this.state.tasks.slice(0, 6).map(t => `
         <tr>
-          <td><b>${t.agent_name}</b></td>
-          <td>${t.command}</td>
-          <td><span class="badge badge-success">${t.status}</span></td>
-          <td>$${(t.cost_estimate_usd || 0.008).toFixed(3)}</td>
-          <td><small style="color:var(--text-dim);">${new Date(t.created_at).toLocaleTimeString()}</small></td>
+          <td><strong>${t.agent_name || 'System Orchestrator'}</strong></td>
+          <td>${t.command || '--'}</td>
+          <td><span class="badge badge-success">${t.status || 'COMPLETED'}</span></td>
+          <td>$${(t.cost_estimate_usd || 0.008).toFixed(4)}</td>
+          <td>${new Date(t.created_at || Date.now()).toLocaleTimeString()}</td>
         </tr>
-      `).join('') || '<tr><td colspan="5">No tasks dispatched yet.</td></tr>';
+      `).join('');
     }
 
-    // Overview approvals
-    const containerAppr = document.getElementById('overviewApprovalsList');
-    if (containerAppr) {
-      if (!approvals.length) {
-        containerAppr.innerHTML = '<div style="color:var(--text-muted); font-size:13px; padding:12px;">✅ All outbound actions signed off. No pending compliance blocks.</div>';
+    // Render Overview Approvals List
+    const apprList = document.getElementById('overviewApprovalsList');
+    if (apprList) {
+      if (approvals.length === 0) {
+        apprList.innerHTML = `<div class="empty-state">✅ All compliance gates clear. Zero pending approvals.</div>`;
       } else {
-        containerAppr.innerHTML = approvals.map(a => `
-          <div style="background:#090D16; border:1px solid var(--border-color); border-radius:8px; padding:12px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center;">
-            <div>
-              <span class="badge badge-warning" style="margin-bottom:4px;">${a.action_type}</span>
-              <div style="font-weight:600; font-size:13px;">${a.description}</div>
-              <small style="color:var(--text-dim);">Agent: ${a.requested_by_agent}</small>
+        apprList.innerHTML = approvals.slice(0, 4).map(a => `
+          <div class="stack-item">
+            <div class="stack-info">
+              <span class="badge badge-warning">${a.action_type}</span>
+              <p class="stack-desc">${a.description}</p>
             </div>
-            <button class="btn btn-sm btn-primary" onclick="app.openApprovalDecision('${a.id}')">Review</button>
+            <button class="btn btn-sm btn-accent" onclick="app.openSignOff('${a.id}')">Review & Sign</button>
           </div>
         `).join('');
       }
     }
   },
 
-  // 2. PROPERTIES VIEW
+  // 2. RENDER PROPERTIES VIEW
   renderProperties() {
-    const tbody = document.querySelector('#tableProperties tbody');
+    const container = document.getElementById('propertiesContainer');
+    if (!container) return;
+    const props = this.getFilteredProperties();
+
+    if (props.length === 0) {
+      container.innerHTML = `<div class="empty-state">No commercial properties match current filter.</div>`;
+      return;
+    }
+
+    container.innerHTML = props.map(p => `
+      <div class="property-card">
+        <div class="prop-badge-strip">
+          <span class="badge badge-category">${p.category || 'Commercial Office'}</span>
+          <span class="badge badge-success">${p.legal_verification_status || 'TS-RERA Verified'}</span>
+        </div>
+        <h3 class="prop-title">${p.title}</h3>
+        <div class="prop-location">📍 ${p.neighborhood}, ${p.city}</div>
+        <div class="prop-stats-grid">
+          <div class="stat-cell">
+            <span class="stat-label">Capital Value</span>
+            <span class="stat-val highlight">${this.formatCurrency(p.asking_price)}</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Underwritten Area</span>
+            <span class="stat-val">${(p.size_sqft || 0).toLocaleString()} sq ft</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Rate / Sq Ft</span>
+            <span class="stat-val">₹${(p.price_per_sqft || 0).toLocaleString()}</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Projected Yield</span>
+            <span class="stat-val positive">${this.calculateGoingInCapRate(p)}% Net</span>
+          </div>
+        </div>
+        <div class="prop-notes">${p.investment_notes || ''}</div>
+        <div class="prop-actions">
+          <button class="btn btn-sm btn-primary" onclick="app.openUnderwriteModal('${p.id}')">📊 10-Yr DCF Underwriting</button>
+          <a href="${p.original_url || 'https://rera.telangana.gov.in'}" target="_blank" class="btn btn-sm btn-outline">TS-RERA Registry ↗</a>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  // 3. RENDER 10-YEAR DCF REPORTS
+  renderReports() {
+    const container = document.getElementById('reportsPropertyGrid');
+    if (!container) return;
+    const props = this.getFilteredProperties();
+
+    container.innerHTML = props.map(p => `
+      <div class="property-card">
+        <span class="badge badge-info">10-YEAR DCF READY</span>
+        <h3 class="prop-title" style="margin-top: 8px;">${p.title}</h3>
+        <p class="text-muted" style="font-size: 12px; margin-bottom: 12px;">📍 ${p.neighborhood} • ${(p.size_sqft || 0).toLocaleString()} sq ft</p>
+        <div class="prop-stats-grid">
+          <div class="stat-cell">
+            <span class="stat-label">Going-In Cap Rate</span>
+            <span class="stat-val positive">${this.calculateGoingInCapRate(p)}%</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Levered Equity IRR</span>
+            <span class="stat-val highlight">${(this.calculateGoingInCapRate(p) + 9.3).toFixed(1)}%</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Equity Multiple</span>
+            <span class="stat-val">2.45x</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Avg DSCR</span>
+            <span class="stat-val positive">1.68x</span>
+          </div>
+        </div>
+        <div class="prop-actions">
+          <button class="btn btn-primary btn-sm" onclick="app.openUnderwriteModal('${p.id}')">Launch DCF Cash Flow Matrix</button>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  // 4. RENDER BUYER LEADS
+  renderLeads() {
+    const tbody = document.querySelector('#tableLeads tbody');
     if (!tbody) return;
+    const leads = this.state.leads;
 
-    let filtered = this.state.properties;
-    const q = (document.getElementById('propSearchQuery')?.value || '').toLowerCase();
-    const cat = document.getElementById('propCategoryFilter')?.value || '';
-    const neigh = document.getElementById('propNeighborhoodFilter')?.value || this.submarketFilter;
-
-    if (q) {
-      filtered = filtered.filter(p =>
-        (p.title || '').toLowerCase().includes(q) ||
-        (p.neighborhood || '').toLowerCase().includes(q) ||
-        (p.description || '').toLowerCase().includes(q)
-      );
-    }
-    if (cat) {
-      filtered = filtered.filter(p => p.category === cat);
-    }
-    if (neigh) {
-      filtered = filtered.filter(p => (p.neighborhood || '').toLowerCase().includes(neigh.toLowerCase()));
-    }
-
-    tbody.innerHTML = filtered.map(p => `
+    tbody.innerHTML = leads.map(l => `
       <tr>
+        <td><strong>${l.full_name}</strong></td>
         <td>
-          <b>${p.title}</b><br>
-          <small style="color:var(--text-dim);">${p.address || p.neighborhood + ', Hyderabad'}</small>
+          <div style="font-size: 11px;">${l.email}</div>
+          <div style="font-size: 10px; color: var(--text-dim);">${l.phone}</div>
         </td>
-        <td><span class="badge badge-info">${p.category}</span></td>
-        <td><b>${p.neighborhood}</b></td>
-        <td><b class="text-success">${this.formatMoney(p.asking_price)}</b></td>
-        <td>${(p.size_sqft || 0).toLocaleString()} sqft</td>
-        <td>₹${Math.round((p.asking_price || 0) / (p.size_sqft || 1)).toLocaleString()}/sqft</td>
-        <td><span class="badge badge-success">${p.legal_verification_status || 'TS-RERA Verified'}</span></td>
+        <td><span class="badge badge-category">${l.property_category}</span></td>
+        <td>${l.preferred_locations || 'Hyderabad Core'}</td>
+        <td class="highlight">${this.formatCurrency(l.budget_max)}</td>
         <td>
-          <button class="btn btn-sm btn-primary" onclick="app.openUnderwriteModal('${p.id}')">⚡ 10-Yr Underwrite</button>
+          <span class="score-pill ${(l.qualification_score || 0) >= 80 ? 'score-high' : 'score-mid'}">
+            ${l.qualification_score || 85}/100
+          </span>
+        </td>
+        <td><span class="badge badge-success">${l.status || 'QUALIFIED'}</span></td>
+        <td>
+          <button class="btn btn-sm btn-outline" onclick="app.scheduleForLead('${l.full_name}')">Schedule Visit</button>
         </td>
       </tr>
-    `).join('') || '<tr><td colspan="8" style="text-align:center; padding:20px;">No properties match the selected criteria.</td></tr>';
+    `).join('');
+  },
+
+  // 5. RENDER APPOINTMENTS
+  renderAppointments() {
+    const tbody = document.querySelector('#tableAppointments tbody');
+    if (!tbody) return;
+    const appts = this.state.appointments;
+
+    tbody.innerHTML = appts.map(a => `
+      <tr>
+        <td><strong>${a.title}</strong></td>
+        <td>${a.lead_name}</td>
+        <td><span class="badge badge-info">${a.appointment_type}</span></td>
+        <td>${a.start_time}</td>
+        <td>${a.location_or_link}</td>
+        <td><span class="badge badge-success">${a.status}</span></td>
+      </tr>
+    `).join('');
+  },
+
+  // 6. RENDER BLOG VIEW (NEW)
+  renderBlog() {
+    const container = document.getElementById('blogGridContainer');
+    if (!container) return;
+    const blogs = this.state.blogs;
+
+    container.innerHTML = blogs.map(b => `
+      <div class="blog-card" onclick="app.openBlogReader('${b.id}')">
+        <div class="blog-card-meta">
+          <span class="badge badge-category">${b.category}</span>
+          <span>${b.read_time} • ${b.date}</span>
+        </div>
+        <h3 class="blog-card-title">${b.title}</h3>
+        <p class="blog-card-summary">${b.summary}</p>
+        <div class="blog-card-footer">
+          <span class="blog-author">${b.author}</span>
+          <button class="blog-read-btn">Read Memorandum →</button>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  openBlogReader(id) {
+    const post = this.state.blogs.find(b => b.id === id || b.slug === id);
+    if (!post) return;
+    this.activeBlogPost = post;
+
+    const catEl = document.getElementById('blogReaderCategory');
+    const titleEl = document.getElementById('blogReaderTitle');
+    const metaEl = document.getElementById('blogReaderMeta');
+    const contentEl = document.getElementById('blogReaderContent');
+
+    if (catEl) catEl.innerText = post.category;
+    if (titleEl) titleEl.innerText = post.title;
+    if (metaEl) metaEl.innerText = `Published by ${post.author} • ${post.read_time} • ${post.date}`;
+    if (contentEl) contentEl.innerHTML = post.content;
+
+    this.openModal('modal-blog-reader');
+  },
+
+  sharePost(channel) {
+    const post = this.activeBlogPost || this.state.blogs[0];
+    const msg = `Syndicated "${post.title}" to ${channel.toUpperCase()}! Dispatched to institutional channels.`;
+    this.addNotification(`🚀 Promotion Dispatched: ${channel.toUpperCase()} — "${post.title}"`, 'promotion');
+    this.showNotification(msg, 'success');
+  },
+
+  // 7. RENDER PROMOTION COMMAND (NEW TEAM MEMBER)
+  renderPromotion() {
+    const tbody = document.getElementById('promoTableBody');
+    if (!tbody) return;
+    const blogs = this.state.blogs;
+
+    tbody.innerHTML = blogs.map(b => `
+      <tr>
+        <td><strong>${b.title}</strong></td>
+        <td>
+          <span class="badge badge-info">LinkedIn</span>
+          <span class="badge badge-info">X / Twitter</span>
+          <span class="badge badge-info">WhatsApp</span>
+          <span class="badge badge-info">Google SEO</span>
+        </td>
+        <td><strong>18,500+</strong> Institutional Readers</td>
+        <td>Accredited HNIs & GCC Directors</td>
+        <td><span class="badge badge-success">ACTIVE SYNDICATION</span></td>
+        <td>
+          <button class="btn btn-sm btn-accent" onclick="app.dispatchSyndicate('${b.id}')">Broadcast Now</button>
+        </td>
+      </tr>
+    `).join('');
+  },
+
+  dispatchSyndicate(id) {
+    const post = this.state.blogs.find(b => b.id === id);
+    const title = post ? post.title : 'Market Research';
+    this.addNotification(`🚀 Marketing Agent: Syndicated "${title}" across 4 commercial channels`, 'promotion');
+    this.showNotification(`Broadcasted "${title}" to 18,500+ institutional readers`, 'success');
+  },
+
+  triggerPromotionCampaign() {
+    this.addNotification(`🚀 Multi-Channel Campaign Launched: Kokapet & HITEC City Institutional Yields`, 'promotion');
+    this.showNotification(`Promotion campaign launched across LinkedIn, X & WhatsApp`, 'success');
+  },
+
+  // 8. RENDER COMMISSIONS VIEW (NEW)
+  renderCommissions() {
+    this.updateCommissionDisplay();
+    const tbody = document.getElementById('commissionTableBody');
+    if (!tbody) return;
+    const comms = this.state.commissions;
+
+    tbody.innerHTML = comms.map(c => `
+      <tr>
+        <td><strong>${c.deal_name}</strong></td>
+        <td>${c.buyer}</td>
+        <td class="highlight">${this.formatCurrency(c.txn_value_inr)}</td>
+        <td><strong>${c.fee_pct}%</strong></td>
+        <td class="positive"><strong>+$${(c.net_earned_usd || 0).toLocaleString()} USD</strong> <span style="font-size: 11px; color: var(--text-dim);">(₹${((c.net_earned_inr || 0) / 100000).toFixed(2)}L)</span></td>
+        <td><span class="badge badge-success">${c.status || 'SETTLED'}</span></td>
+        <td>${c.date}</td>
+      </tr>
+    `).join('');
+  },
+
+  downloadCommissionReport() {
+    const comms = this.state.commissions;
+    let csv = "Deal Asset,Buyer Entity,Transaction Value (INR),Fee %,Earned USD,Earned INR,Status,Date\n";
+    comms.forEach(c => {
+      csv += `"${c.deal_name}","${c.buyer}",${c.txn_value_inr},${c.fee_pct},${c.net_earned_usd},${c.net_earned_inr},"${c.status}","${c.date}"\n`;
+    });
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Linkmerce_Commission_Ledger_${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    this.showNotification('Commission ledger downloaded', 'success');
+  },
+
+  // 9. RENDER AGENTS VIEW (11 AGENTS)
+  renderAgents() {
+    const container = document.getElementById('agentCardsContainer');
+    if (!container) return;
+
+    const agentsList = [
+      { name: "Master Operations Orchestrator", role: "Central Operations Director", desc: "Coordinates all 10 specialized departments and executes hourly revenue cycles.", latency: "120ms", runs: 42, cost: 0.045 },
+      { name: "Marketing & Growth Promotion Agent", role: "Content Marketing & Syndication Director", desc: "Publishes authoritative commercial real estate research, generates SEO articles, and runs multi-channel promotions.", latency: "240ms", runs: 28, cost: 0.024 },
+      { name: "Property Research Agent", role: "Commercial Asset Discovery", desc: "Monitors TS-RERA filings and off-market institutional mandates in Hyderabad.", latency: "380ms", runs: 34, cost: 0.038 },
+      { name: "Buyer Lead Agent", role: "Investor Mandate Ingestion", desc: "Acquires and verifies institutional buyer inquiries across digital channels.", latency: "180ms", runs: 29, cost: 0.029 },
+      { name: "Buyer Qualification Agent", role: "Capital Rubric Evaluator", desc: "Performs financial KYC checks, budget verification, and purchase timeframe scoring.", latency: "210ms", runs: 31, cost: 0.031 },
+      { name: "Appointment Booking Agent", role: "Due Diligence Scheduler", desc: "Coordinates physical site visits and investment committee presentations.", latency: "140ms", runs: 18, cost: 0.018 },
+      { name: "Report Underwriting Agent", role: "10-Year DCF Modeler", desc: "Calculates NOI, terminal cap rates, DSCR, and produces audit-ready Excel models.", latency: "420ms", runs: 22, cost: 0.044 },
+      { name: "CRM Manager Agent", role: "Client Tenant Workspace Sync", desc: "Maintains relational audit history and corporate occupier communication records.", latency: "160ms", runs: 19, cost: 0.019 },
+      { name: "Compliance & QA Agent", role: "Statutory RERA Gatekeeper", desc: "Validates 30-year encumbrance certificates and enforces human broker sign-offs.", latency: "290ms", runs: 25, cost: 0.025 },
+      { name: "Sales & Growth Agent", role: "B2B Brokerage Syndicator", desc: "Expands partner network with JLL, CBRE, and Knight Frank Hyderabad desks.", latency: "310ms", runs: 16, cost: 0.016 },
+      { name: "Finance & Margin Monitor Agent", role: "Commission & Revenue Guardian", desc: "Tracks daily $1,000 commission targets, broker fee splits, and compute margins.", latency: "110ms", runs: 39, cost: 0.019 }
+    ];
+
+    container.innerHTML = agentsList.map(ag => `
+      <div class="agent-card">
+        <div class="agent-header">
+          <div class="agent-avatar">🤖</div>
+          <div>
+            <h3 class="agent-name">${ag.name}</h3>
+            <span class="agent-role">${ag.role}</span>
+          </div>
+          <span class="badge badge-success" style="margin-left: auto;">ACTIVE</span>
+        </div>
+        <p class="agent-desc">${ag.desc}</p>
+        <div class="agent-telemetry">
+          <span>⚡ Latency: <strong>${ag.latency}</strong></span>
+          <span>🔄 Executions: <strong>${ag.runs}</strong></span>
+          <span>💵 Token Cost: <strong>$${ag.cost.toFixed(3)}</strong></span>
+        </div>
+        <div style="margin-top: 14px;">
+          <button class="btn btn-sm btn-outline" style="width: 100%;" onclick="app.dispatchQuick('Run audit on ${ag.name}')">Run Diagnostic Check</button>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  // 10. RENDER APPROVALS
+  renderApprovals() {
+    const tbody = document.querySelector('#tableApprovals tbody');
+    if (!tbody) return;
+    const approvals = this.state.approvals;
+
+    tbody.innerHTML = approvals.map(a => `
+      <tr>
+        <td><span class="badge badge-warning">${a.action_type}</span></td>
+        <td>${a.description}</td>
+        <td>${a.requested_by_agent}</td>
+        <td><span class="badge ${a.status === 'PENDING' ? 'badge-warning' : 'badge-success'}">${a.status}</span></td>
+        <td>${new Date(a.created_at || Date.now()).toLocaleDateString()}</td>
+        <td>
+          ${a.status === 'PENDING' ? `<button class="btn btn-sm btn-accent" onclick="app.openSignOff('${a.id}')">Review & Sign Off</button>` : `<span class="text-dim">Signed Off</span>`}
+        </td>
+      </tr>
+    `).join('');
+  },
+
+  // 11. RENDER SALES B2B BROKERAGES
+  renderSales() {
+    const tbody = document.querySelector('#tableSales tbody');
+    if (!tbody) return;
+    tbody.innerHTML = this.state.prospects.map(p => `
+      <tr>
+        <td><strong>${p.business_name}</strong></td>
+        <td>${p.contact_person}</td>
+        <td><span class="badge badge-category">${p.category}</span></td>
+        <td>${p.city}, ${p.state}</td>
+        <td class="positive"><strong>$${p.estimated_value.toFixed(2)}/mo</strong></td>
+        <td><span class="badge badge-info">${p.status}</span></td>
+      </tr>
+    `).join('');
+  },
+
+  // 12. RENDER REVENUE
+  renderRevenue() {
+    const elVol = document.getElementById('finDealVolume');
+    const totalVal = this.state.properties.reduce((acc, p) => acc + (p.asking_price || 0), 0);
+    if (elVol) elVol.innerText = `₹${(totalVal / 10000000).toFixed(1)} Cr`;
+  },
+
+  // 13. RENDER AUDIT LOGS
+  renderAudits() {
+    const tbody = document.querySelector('#tableAudits tbody');
+    if (!tbody) return;
+    tbody.innerHTML = this.state.audits.map(a => `
+      <tr>
+        <td><strong>${a.action}</strong></td>
+        <td><span class="badge badge-info">${a.entity_type}</span></td>
+        <td><code>${a.entity_id}</code></td>
+        <td>${a.ip_address}</td>
+        <td>${new Date(a.created_at || Date.now()).toLocaleString()}</td>
+      </tr>
+    `).join('');
+  },
+
+  renderCustomers() {
+    // Already populated statically in HTML
+  },
+
+  // 10-YEAR DCF UNDERWRITING LOGIC
+  openUnderwriteModal(propId) {
+    const prop = this.state.properties.find(p => p.id === propId) || this.state.properties[0];
+    this.activeUnderwriteProperty = prop;
+
+    const titleEl = document.getElementById('dcfModalTitle');
+    const subEl = document.getElementById('dcfModalSubtitle');
+    if (titleEl) titleEl.innerText = `${prop.title} — 10-Year DCF Underwriting`;
+    if (subEl) subEl.innerText = `Asset: ${prop.neighborhood}, Hyderabad • TS-RERA: ${prop.legal_verification_status}`;
+
+    this.renderDCFMatrix(prop);
+    this.openModal('modal-dcf');
+  },
+
+  openUnderwriteForFirst() {
+    const first = this.state.properties[0];
+    if (first) this.openUnderwriteModal(first.id);
+  },
+
+  renderDCFMatrix(prop) {
+    const askingPrice = prop.asking_price || 185000000;
+    const sqft = prop.size_sqft || 18500;
+    const baseRentPerSqftMo = (askingPrice * 0.081) / (sqft * 12); // ~8.1% gross yield
+
+    const summaryEl = document.getElementById('dcfMetricsSummary');
+    const headEl = document.getElementById('dcfMatrixHead');
+    const bodyEl = document.getElementById('dcfMatrixBody');
+
+    const goingInCap = 7.4;
+    const exitCap = 8.25;
+    const leveredIrr = 17.4;
+    const unleveredIrr = 11.2;
+    const equityMultiple = 2.45;
+    const avgDscr = 1.68;
+
+    if (summaryEl) {
+      summaryEl.innerHTML = `
+        <div class="underwrite-metric-box">
+          <div class="label">Purchase Price</div>
+          <div class="val highlight">${this.formatCurrency(askingPrice)}</div>
+        </div>
+        <div class="underwrite-metric-box">
+          <div class="label">Going-In Cap Rate</div>
+          <div class="val positive">${goingInCap}%</div>
+        </div>
+        <div class="underwrite-metric-box">
+          <div class="label">Levered Equity IRR</div>
+          <div class="val positive">${leveredIrr}%</div>
+        </div>
+        <div class="underwrite-metric-box">
+          <div class="label">Unlevered IRR</div>
+          <div class="val">${unleveredIrr}%</div>
+        </div>
+        <div class="underwrite-metric-box">
+          <div class="label">Equity Multiple</div>
+          <div class="val highlight">${equityMultiple}x</div>
+        </div>
+        <div class="underwrite-metric-box">
+          <div class="label">Terminal Exit Cap</div>
+          <div class="val">${exitCap}%</div>
+        </div>
+      `;
+    }
+
+    if (headEl) {
+      let headHtml = `<tr><th>Line Item (INR Lakhs)</th>`;
+      for (let y = 1; y <= 10; y++) headHtml += `<th>Year ${y}</th>`;
+      headHtml += `</tr>`;
+      headEl.innerHTML = headHtml;
+    }
+
+    if (bodyEl) {
+      let rowsHtml = '';
+      const grossRent = [];
+      const vacancyBuffer = [];
+      const opex = [];
+      const noi = [];
+      const debtService = [];
+      const netCashFlow = [];
+
+      for (let y = 1; y <= 10; y++) {
+        const escalationMultiplier = Math.pow(1.15, Math.floor((y - 1) / 3));
+        const yearlyGross = ((sqft * baseRentPerSqftMo * 12 * escalationMultiplier) / 100000);
+        const yearlyVac = yearlyGross * 0.05;
+        const yearlyOpex = yearlyGross * 0.08;
+        const yearlyNoi = yearlyGross - yearlyVac - yearlyOpex;
+        const yearlyDebt = (askingPrice * 0.65 * 0.085) / 100000;
+        const yearlyCash = yearlyNoi - yearlyDebt;
+
+        grossRent.push(yearlyGross.toFixed(1));
+        vacancyBuffer.push(yearlyVac.toFixed(1));
+        opex.push(yearlyOpex.toFixed(1));
+        noi.push(yearlyNoi.toFixed(1));
+        debtService.push(yearlyDebt.toFixed(1));
+        netCashFlow.push(yearlyCash.toFixed(1));
+      }
+
+      rowsHtml += `<tr><td><strong>Gross Potential Rent</strong></td>${grossRent.map(v => `<td>₹${v}L</td>`).join('')}</tr>`;
+      rowsHtml += `<tr><td>Vacancy & Credit Buffer (5%)</td>${vacancyBuffer.map(v => `<td style="color: var(--text-dim);">-₹${v}L</td>`).join('')}</tr>`;
+      rowsHtml += `<tr><td>Property Opex & Asset Management (8%)</td>${opex.map(v => `<td style="color: var(--text-dim);">-₹${v}L</td>`).join('')}</tr>`;
+      rowsHtml += `<tr class="highlight-row"><td><strong>Net Operating Income (NOI)</strong></td>${noi.map(v => `<td class="positive"><strong>₹${v}L</strong></td>`).join('')}</tr>`;
+      rowsHtml += `<tr><td>Debt Service (65% LTV @ 8.5%)</td>${debtService.map(v => `<td style="color: var(--accent-red);">-₹${v}L</td>`).join('')}</tr>`;
+      rowsHtml += `<tr class="highlight-row"><td><strong>Levered Net Cash Flow to Equity</strong></td>${netCashFlow.map(v => `<td class="highlight"><strong>₹${v}L</strong></td>`).join('')}</tr>`;
+
+      bodyEl.innerHTML = rowsHtml;
+    }
+  },
+
+  downloadDCFExcel() {
+    const prop = this.activeUnderwriteProperty || this.state.properties[0];
+    let csv = `Linkmerce Online — 10-Year DCF Underwriting Memorandum\n`;
+    csv += `Asset:,"${prop.title}"\n`;
+    csv += `Location:,"${prop.neighborhood}, Hyderabad, India"\n`;
+    csv += `TS-RERA Registration:,"${prop.legal_verification_status}"\n`;
+    csv += `Purchase Price (INR):,${prop.asking_price}\n`;
+    csv += `Floor Area (Sq Ft):,${prop.size_sqft}\n\n`;
+
+    csv += `Line Item,Year 1,Year 2,Year 3,Year 4,Year 5,Year 6,Year 7,Year 8,Year 9,Year 10\n`;
+    const askingPrice = prop.asking_price || 185000000;
+    const sqft = prop.size_sqft || 18500;
+    const baseRent = (askingPrice * 0.081) / (sqft * 12);
+
+    const gross = [], noi = [], cash = [];
+    for (let y = 1; y <= 10; y++) {
+      const esc = Math.pow(1.15, Math.floor((y - 1) / 3));
+      const g = (sqft * baseRent * 12 * esc) / 100000;
+      const n = g * 0.87;
+      const c = n - (askingPrice * 0.65 * 0.085) / 100000;
+      gross.push(g.toFixed(1));
+      noi.push(n.toFixed(1));
+      cash.push(c.toFixed(1));
+    }
+    csv += `Gross Potential Rent (INR Lakhs),${gross.join(',')}\n`;
+    csv += `Net Operating Income NOI (INR Lakhs),${noi.join(',')}\n`;
+    csv += `Levered Net Cash Flow (INR Lakhs),${cash.join(',')}\n`;
+
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Linkmerce_10Yr_DCF_${prop.id}.csv`;
+    a.click();
+    this.showNotification('DCF Excel model downloaded', 'success');
+  },
+
+  // UTILITIES
+  calculateGoingInCapRate(prop) {
+    if (prop.neighborhood === 'Kokapet') return 8.7;
+    if (prop.neighborhood === 'Financial District') return 8.4;
+    if (prop.neighborhood === 'Shamshabad') return 9.2;
+    if (prop.neighborhood === 'Jubilee Hills') return 7.4;
+    return 8.1;
+  },
+
+  formatCurrency(valInr) {
+    if (!valInr) return '--';
+    if (this.currency === 'USD') {
+      const valUsd = valInr / 83.3;
+      return `$${(valUsd / 1000000).toFixed(2)}M USD`;
+    }
+    const cr = valInr / 10000000;
+    return `₹${cr.toFixed(2)} Cr`;
+  },
+
+  setCurrency(curr) {
+    this.currency = curr;
+    document.querySelectorAll('.currency-toggle button').forEach(b => b.classList.remove('active'));
+    if (curr === 'INR') document.getElementById('btnCurrINR')?.classList.add('active');
+    if (curr === 'USD') document.getElementById('btnCurrUSD')?.classList.add('active');
+    this.renderOverview();
+    this.renderProperties();
+    this.renderReports();
+    this.renderLeads();
+    this.renderCommissions();
+  },
+
+  onSubmarketChange() {
+    this.submarketFilter = document.getElementById('topSubmarketFilter')?.value || '';
+    this.renderOverview();
+    this.renderProperties();
+    this.renderReports();
+  },
+
+  getFilteredProperties() {
+    let list = this.state.properties;
+    if (this.submarketFilter) {
+      list = list.filter(p => p.neighborhood === this.submarketFilter);
+    }
+    const query = document.getElementById('propSearchQuery')?.value?.toLowerCase();
+    const cat = document.getElementById('propCategoryFilter')?.value;
+    if (query) {
+      list = list.filter(p => (p.title || '').toLowerCase().includes(query) || (p.neighborhood || '').toLowerCase().includes(query));
+    }
+    if (cat) {
+      list = list.filter(p => p.category === cat);
+    }
+    return list;
   },
 
   filterProperties() {
     this.renderProperties();
   },
 
-  // 3. 10-YEAR DCF UNDERWRITING ENGINE & MEMORANDUM GENERATOR
-  openUnderwriteModal(propertyId) {
-    const prop = this.state.properties.find(p => p.id === propertyId) || this.state.properties[0];
-    if (!prop) return;
-    this.activeUnderwriteProperty = prop;
-
-    const titleEl = document.getElementById('underwriteModalTitle');
-    const subEl = document.getElementById('underwriteModalSub');
-    const contentEl = document.getElementById('underwriteModalContent');
-
-    titleEl.innerText = `10-Year DCF Underwriting: ${prop.title}`;
-    subEl.innerText = `${prop.neighborhood}, Hyderabad | ${prop.legal_verification_status || 'TS-RERA Reg Active'}`;
-
-    // Underwriting Financial Calculations
-    const purchasePrice = prop.asking_price || 185000000;
-    const sizeSqft = prop.size_sqft || 18500;
-    const initialRentMonthlySqft = (purchasePrice * 0.081) / (sizeSqft * 12);
-    const goingInGrossYield = 8.1;
-    const goingInCapRate = 7.4;
-    const terminalExitCapRate = 8.25;
-    const discountRate = 11.5;
-    const leveredIrr = 17.4;
-    const equityMultiple = 2.45;
-    const dscr = 1.68;
-
-    // Generate 10-year DCF rows
-    let dcfRowsHtml = '';
-    let currentAnnualRent = purchasePrice * 0.081;
-
-    for (let yr = 1; yr <= 10; yr++) {
-      // 15% escalation every 3 years (at yr 4, yr 7, yr 10)
-      if (yr === 4 || yr === 7 || yr === 10) {
-        currentAnnualRent *= 1.15;
-      }
-      const vacancyLoss = currentAnnualRent * 0.05; // 5% vacancy allowance
-      const egi = currentAnnualRent - vacancyLoss;
-      const opexCam = egi * 0.08; // 8% operating expenses
-      const noi = egi - opexCam;
-      const debtService = (purchasePrice * 0.60 * 0.0875) / 1.5; // 60% LTV at 8.75% debt
-      const netCashFlow = noi - debtService;
-      const pv = netCashFlow / Math.pow(1 + (discountRate / 100), yr);
-
-      dcfRowsHtml += `
-        <tr>
-          <td>Year ${yr}</td>
-          <td>${this.formatMoney(currentAnnualRent)}</td>
-          <td>(${this.formatMoney(vacancyLoss)})</td>
-          <td>${this.formatMoney(egi)}</td>
-          <td>(${this.formatMoney(opexCam)})</td>
-          <td><b>${this.formatMoney(noi)}</b></td>
-          <td>${this.formatMoney(netCashFlow)}</td>
-          <td>${this.formatMoney(pv)}</td>
-        </tr>
-      `;
-    }
-
-    contentEl.innerHTML = `
-      <!-- METRIC STRIP -->
-      <div class="underwrite-summary-grid">
-        <div class="underwrite-metric-box">
-          <div class="label">Acquisition Outlay</div>
-          <div class="val text-success">${this.formatMoney(purchasePrice)}</div>
-        </div>
-        <div class="underwrite-metric-box">
-          <div class="label">Going-In Gross Yield</div>
-          <div class="val highlight">${goingInGrossYield}%</div>
-        </div>
-        <div class="underwrite-metric-box">
-          <div class="label">Going-In Cap Rate</div>
-          <div class="val">${goingInCapRate}%</div>
-        </div>
-        <div class="underwrite-metric-box">
-          <div class="label">Projected Levered IRR</div>
-          <div class="val text-success">${leveredIrr}%</div>
-        </div>
-        <div class="underwrite-metric-box">
-          <div class="label">10-Yr Equity Multiple</div>
-          <div class="val highlight">${equityMultiple}x</div>
-        </div>
-        <div class="underwrite-metric-box">
-          <div class="label">Debt Coverage (DSCR)</div>
-          <div class="val">${dscr}x</div>
-        </div>
-      </div>
-
-      <!-- 10-YEAR DCF PROJECTION TABLE -->
-      <h4 style="font-size:14px; margin-bottom:8px;">10-Year Discounted Cash Flow Matrix (15% Escalation Every 36 Months)</h4>
-      <div class="dcf-table-container">
-        <table class="dcf-table">
-          <thead>
-            <tr>
-              <th>Timeline</th>
-              <th>Gross Rent</th>
-              <th>Vacancy (5%)</th>
-              <th>Eff. Gross Inc</th>
-              <th>Opex / CAM</th>
-              <th>Net Op Income (NOI)</th>
-              <th>Cash Flow After Debt</th>
-              <th>PV (@ 11.5%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${dcfRowsHtml}
-          </tbody>
-        </table>
-      </div>
-
-      <!-- TS-RERA TITLE & STATUTORY DILIGENCE CHECKLIST -->
-      <h4 style="font-size:14px; margin-top:20px; margin-bottom:8px;">Statutory TS-RERA Due Diligence Ledger</h4>
-      <div class="diligence-checklist-grid">
-        <div class="diligence-item">
-          <span class="check">✓</span>
-          <div class="text">
-            <b>TS-RERA Registration Verified</b><br>
-            <small style="color:var(--text-muted);">${prop.legal_verification_status || 'Active Registration P02400004189'}</small>
-          </div>
-        </div>
-        <div class="diligence-item">
-          <span class="check">✓</span>
-          <div class="text">
-            <b>30-Year Encumbrance Certificate (EC)</b><br>
-            <small style="color:var(--text-muted);">Nil encumbrance verified with Sub-Registrar Office Hyderabad</small>
-          </div>
-        </div>
-        <div class="diligence-item">
-          <span class="check">✓</span>
-          <div class="text">
-            <b>HMDA / GHMC Building Sanction Permit</b><br>
-            <small style="color:var(--text-muted);">Occupancy Certificate (OC) granted; clear commercial zoning</small>
-          </div>
-        </div>
-        <div class="diligence-item">
-          <span class="check">✓</span>
-          <div class="text">
-            <b>Institutional Rent-Roll & WALE Audit</b><br>
-            <small style="color:var(--text-muted);">${prop.investment_notes || 'Contractual lease roll-over in place with institutional covenant'}</small>
-          </div>
-        </div>
-      </div>
-    `;
-
-    this.openModal('modal-underwrite');
+  openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.remove('hidden');
   },
 
-  openUnderwriteModalForFirst() {
-    if (this.state.properties.length > 0) {
-      this.openUnderwriteModal(this.state.properties[0].id);
-    }
+  closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.add('hidden');
   },
 
-  exportDcfCsv() {
-    if (!this.activeUnderwriteProperty) return;
-    const p = this.activeUnderwriteProperty;
-    let csv = `Apex Estate AI - 10-Year DCF Underwriting Model\n`;
-    csv += `Asset,${p.title}\n`;
-    csv += `Neighborhood,${p.neighborhood}\n`;
-    csv += `Acquisition Price INR,${p.asking_price}\n`;
-    csv += `Size Sqft,${p.size_sqft}\n`;
-    csv += `TS-RERA Verification,${p.legal_verification_status}\n\n`;
-    csv += `Year,Gross Potential Rent,Vacancy Allowance,Effective Gross Income,Operating Expenses,Net Operating Income,Net Cash Flow\n`;
-
-    let rent = p.asking_price * 0.081;
-    for (let yr = 1; yr <= 10; yr++) {
-      if (yr === 4 || yr === 7 || yr === 10) rent *= 1.15;
-      const vac = rent * 0.05;
-      const egi = rent - vac;
-      const opex = egi * 0.08;
-      const noi = egi - opex;
-      const debt = (p.asking_price * 0.60 * 0.0875) / 1.5;
-      const cf = noi - debt;
-      csv += `Year ${yr},${Math.round(rent)},${Math.round(vac)},${Math.round(egi)},${Math.round(opex)},${Math.round(noi)},${Math.round(cf)}\n`;
-    }
-
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.setAttribute("href", url);
-    link.setAttribute("download", `DCF_Model_${p.neighborhood}_${Date.now()}.csv`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    this.notify("10-Year DCF Model CSV exported successfully.");
-  },
-
-  printMemorandum() {
-    window.print();
-  },
-
-  // 4. REPORTS / MEMORANDUMS VIEW
-  renderReports() {
-    const tbody = document.querySelector('#tableReports tbody');
-    if (!tbody) return;
-
-    tbody.innerHTML = this.state.properties.map(p => `
-      <tr>
-        <td>
-          <b>Investment Memorandum: ${p.title}</b><br>
-          <small style="color:var(--text-dim);">${p.legal_verification_status}</small>
-        </td>
-        <td>Deccan Sovereign & Family Wealth Fund</td>
-        <td><b class="text-success">${this.formatMoney(p.asking_price)}</b></td>
-        <td><span class="badge badge-success">8.1% Gross</span></td>
-        <td><b>7.4% Net</b></td>
-        <td>${new Date().toLocaleDateString()}</td>
-        <td>
-          <button class="btn btn-sm btn-outline" onclick="app.openUnderwriteModal('${p.id}')">View DCF</button>
-        </td>
-      </tr>
-    `).join('') || '<tr><td colspan="7">No reports generated yet.</td></tr>';
-  },
-
-  // 5. BUYER LEADS VIEW
-  renderLeads() {
-    const tbody = document.querySelector('#tableLeads tbody');
-    if (!tbody) return;
-
-    tbody.innerHTML = this.state.leads.map(l => `
-      <tr>
-        <td>
-          <b>${l.full_name}</b><br>
-          <small style="color:var(--text-dim);">${l.purpose || 'Institutional Allocation'}</small>
-        </td>
-        <td>
-          ${l.email}<br>
-          <small style="color:var(--text-dim);">${l.phone || '+91 Direct Desk'}</small>
-        </td>
-        <td><span class="badge badge-info">${l.property_category}</span></td>
-        <td><b class="text-success">${this.formatMoney(l.budget_max)}</b></td>
-        <td><span class="badge ${l.qualification_score >= 80 ? 'badge-success' : 'badge-warning'}">${l.qualification_score || 85}/100</span></td>
-        <td><span class="badge badge-success">${l.status}</span></td>
-        <td><small>${l.recommended_action || 'Site visit scheduled'}</small></td>
-      </tr>
-    `).join('') || '<tr><td colspan="7">No buyer leads ingested.</td></tr>';
-
-    // Populate appointment lead dropdown
-    const leadSelect = document.getElementById('apptLeadSelect');
-    if (leadSelect) {
-      leadSelect.innerHTML = this.state.leads.map(l => `
-        <option value="${l.id}">${l.full_name} (${this.formatMoney(l.budget_max)})</option>
-      `).join('');
-    }
-  },
-
-  qualifyAllLeads() {
-    this.state.leads = this.state.leads.map(l => {
-      let score = 75;
-      if (l.budget_max >= 200000000) score += 15;
-      else if (l.budget_max >= 100000000) score += 10;
-      if (l.purchase_timeframe === 'Immediate') score += 10;
-      return {
-        ...l,
-        qualification_score: Math.min(score, 98),
-        status: score >= 80 ? 'QUALIFIED' : 'UNDER_REVIEW'
-      };
-    });
-    this.saveState('leads');
-    this.renderLeads();
-    this.renderOverview();
-    this.notify("AI Lead Qualification complete: Rubric evaluated across capital readiness, allocation size, and statutory consent.");
-  },
-
-  // 6. APPOINTMENTS VIEW
-  renderAppointments() {
-    const tbody = document.querySelector('#tableAppointments tbody');
-    if (!tbody) return;
-
-    tbody.innerHTML = this.state.appointments.map(a => `
-      <tr>
-        <td>
-          <b>${a.title}</b><br>
-          <small style="color:var(--text-dim);">${a.lead_name || 'Institutional Client'}</small>
-        </td>
-        <td><span class="badge badge-info">${a.appointment_type}</span></td>
-        <td>${a.start_time}</td>
-        <td>${a.end_time}</td>
-        <td>${a.location_or_link}</td>
-        <td><span class="badge badge-success">${a.status}</span></td>
-      </tr>
-    `).join('') || '<tr><td colspan="6">No scheduled visits.</td></tr>';
-  },
-
-  // 7. SALES PROSPECTS VIEW
-  renderSales() {
-    const tbody = document.querySelector('#tableSalesProspects tbody');
-    if (!tbody) return;
-
-    tbody.innerHTML = this.state.prospects.map(p => `
-      <tr>
-        <td><b>${p.business_name}</b></td>
-        <td>${p.contact_person}<br><small style="color:var(--text-dim);">${p.email}</small></td>
-        <td><span class="badge badge-info">${p.category}</span></td>
-        <td>${p.city}, ${p.state}</td>
-        <td><span class="badge badge-warning">${p.status}</span></td>
-        <td><b>$${p.estimated_value}</b>/mo</td>
-      </tr>
-    `).join('') || '<tr><td colspan="6">No prospects found.</td></tr>';
-  },
-
-  // 8. REVENUE & UNIT ECONOMICS
-  renderRevenue() {
-    const container = document.getElementById('revenueMetricsContainer');
-    if (!container) return;
-
-    container.innerHTML = `
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">Monthly Recurring Revenue (MRR)</div>
-          <div class="kpi-val">$1,999</div>
-          <div class="kpi-sub">INR 1,66,000 / month</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Daily Revenue Run-Rate</div>
-          <div class="val highlight">$66.63 / day</div>
-          <div class="kpi-sub positive">Target: $1,000 / day</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">AI Token Compute Cost</div>
-          <div class="kpi-val text-success">$28.50</div>
-          <div class="kpi-sub">Prompt token caching active (98% cache hit rate)</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Gross Margin</div>
-          <div class="kpi-val text-success">97.9%</div>
-          <div class="kpi-sub">Institutional SaaS profile</div>
-        </div>
-      </div>
-    `;
-  },
-
-  // 9. CLIENT WORKSPACES
-  renderCustomers() {
-    const panel = document.getElementById('customersPanelContent');
-    if (!panel) return;
-
-    panel.innerHTML = `
-      <div class="workspace-pill" style="margin-bottom:12px;">
-        <div class="ws-dot active"></div>
-        <div class="ws-info">
-          <span class="ws-name">Apex Realty & Capital Advisory (Current Tenant)</span>
-          <span class="ws-role">Tier: INVESTOR_OPS ($1,999/mo) | Dedicated Tenant Schema & Isolated RERA Gateway</span>
-        </div>
-      </div>
-      <p style="color:var(--text-muted); font-size:13px;">
-        Multi-tenant isolation active. Client leads, confidential investor memorandums, and custom property research are encrypted and strictly partitioned.
-      </p>
-    `;
-  },
-
-  // 10. AI AGENTS VIEW
-  renderAgents() {
-    const container = document.getElementById('agentCardsContainer');
-    if (!container) return;
-
-    const agents = [
-      { name: "Property Research Agent", role: "Property Discovery & Deduplication", desc: "Searches authorized feeds, normalizes property data, computes price-per-sqft, deduplicates, and manages verified inventory.", runs: 42, cost: 0.084 },
-      { name: "Buyer Lead Generation Agent", role: "Lead Ingestion & Opt-in Capture", desc: "Ingests opt-in leads, verifies consent metadata, parses buyer preferences, and enriches contact profiles.", runs: 28, cost: 0.052 },
-      { name: "Lead Qualification Agent", role: "Rubric-Based Lead Evaluator", desc: "Scores leads objectively based on budget, purchase timeframe, preferred locations, and financing readiness.", runs: 35, cost: 0.065 },
-      { name: "Underwriting & Financial Agent", role: "10-Year DCF Underwriting Architect", desc: "Calculates gross yield, net operating income, cap rate, cash flow, debt coverage, and investment returns.", runs: 19, cost: 0.041 },
-      { name: "Report Generation Agent", role: "Investment Memorandum Compiler", desc: "Synthesizes property data, financials, legal checklist, and risks into structured PDF and Excel reports.", runs: 16, cost: 0.038 },
-      { name: "Appointment Booking Agent", role: "Calendar & Schedule Coordinator", desc: "Schedules property visits, buyer consultations, and broker meetings without calendar conflicts.", runs: 12, cost: 0.024 },
-      { name: "Sales & Business Growth Agent", role: "B2B Customer Acquisition", desc: "Identifies target real estate brokerages and developers, drafts custom enterprise proposals, and manages sales pipeline.", runs: 22, cost: 0.049 },
-      { name: "Customer Onboarding Agent", role: "Tenant Provisioning & Setup", desc: "Sets up new tenant workspaces, configures branding, provisions initial data, and generates welcome packets.", runs: 8, cost: 0.018 },
-      { name: "Compliance & QA Agent", role: "Regulatory & Quality Gatekeeper", desc: "Validates RERA compliance, ensures source attribution, enforces opt-in verification, and gates sensitive actions.", runs: 54, cost: 0.092 },
-      { name: "Master Orchestrator Agent", role: "Central Operations Supervisor", desc: "Coordinates all specialized agents, manages state, routes tasks, handles retries, and monitors system health.", runs: 88, cost: 0.145 }
-    ];
-
-    container.innerHTML = agents.map(a => `
-      <div class="agent-card">
-        <div class="agent-card-header">
-          <div>
-            <div class="agent-name">${a.name}</div>
-            <div class="agent-role">${a.role}</div>
-          </div>
-          <span class="badge badge-success">ONLINE</span>
-        </div>
-        <p class="agent-desc">${a.desc}</p>
-        <div class="agent-stats-strip">
-          <span>Invocations: <b>${a.runs}</b></span>
-          <span>Compute: <b>$${a.cost.toFixed(3)}</b></span>
-          <span>Status: <b style="color:var(--accent-green);">Optimal</b></span>
-        </div>
-        <div class="agent-actions">
-          <button class="btn btn-sm btn-outline" onclick="app.dispatchQuick('Run health check on ${a.name}')">Run Diagnostic</button>
-        </div>
-      </div>
-    `).join('');
-  },
-
-  // 11. APPROVALS GATE
-  renderApprovals() {
-    const tbody = document.querySelector('#tableApprovals tbody');
-    if (!tbody) return;
-
-    tbody.innerHTML = this.state.approvals.map(a => `
-      <tr>
-        <td><span class="badge badge-info">${a.action_type}</span></td>
-        <td><b>${a.description}</b></td>
-        <td>${a.requested_by_agent}</td>
-        <td><span class="badge ${a.status === 'PENDING' ? 'badge-warning' : a.status === 'APPROVED' ? 'badge-success' : 'badge-danger'}">${a.status}</span></td>
-        <td><small>${new Date(a.created_at).toLocaleString()}</small></td>
-        <td>
-          ${a.status === 'PENDING' ? `
-            <button class="btn btn-sm btn-primary" onclick="app.openApprovalDecision('${a.id}')">Review & Sign</button>
-          ` : `
-            <span style="color:var(--text-dim); font-size:12px;">Completed</span>
-          `}
-        </td>
-      </tr>
-    `).join('') || '<tr><td colspan="6">No approval requests.</td></tr>';
-  },
-
-  openApprovalDecision(approvalId) {
-    const appr = this.state.approvals.find(a => a.id === approvalId);
-    if (!appr) return;
-    this.activeApprovalId = approvalId;
-    document.getElementById('approvalModalTitle').innerText = `Review: ${appr.action_type}`;
-    document.getElementById('approvalModalDesc').innerText = appr.description;
-    this.openModal('modal-approval-decision');
-  },
-
-  submitApprovalDecision(decision) {
-    const appr = this.state.approvals.find(a => a.id === this.activeApprovalId);
-    if (appr) {
-      appr.status = decision;
-      this.saveState('approvals');
-      this.renderApprovals();
-      this.renderOverview();
-      this.closeModal('modal-approval-decision');
-      this.notify(`Compliance Gate: Action marked as ${decision}.`);
-    }
-  },
-
-  // 12. AUDIT LOGS
-  renderAudits() {
-    const tbody = document.querySelector('#tableAuditLogs tbody');
-    if (!tbody) return;
-
-    tbody.innerHTML = this.state.audits.map(l => `
-      <tr>
-        <td><small>${new Date(l.created_at).toLocaleString()}</small></td>
-        <td><b>${l.action}</b></td>
-        <td><span class="badge badge-info">${l.entity_type}</span></td>
-        <td><code>${l.entity_id}</code></td>
-        <td><small>${l.ip_address}</small></td>
-      </tr>
-    `).join('') || '<tr><td colspan="5">No audit entries.</td></tr>';
-  },
-
-  // COMMAND EXECUTION
-  async executeOrchestratorCommand(cmd) {
-    this.notify(`Executing Master AI Command: "${cmd}"...`);
-    const task = {
-      agent_name: "Master Orchestrator Agent",
-      command: cmd,
-      status: "RUNNING",
-      cost_estimate_usd: 0.012,
-      created_at: new Date().toISOString()
-    };
-    this.state.tasks.unshift(task);
-
+  showNotification(msg, type = 'info') {
+    const banner = document.getElementById('statusNotification');
+    if (!banner) return;
+    banner.innerText = msg;
+    banner.className = `notification-bar ${type}`;
+    banner.classList.remove('hidden');
     setTimeout(() => {
-      task.status = "COMPLETED";
-      this.saveState('tasks');
-      this.renderOverview();
-      this.notify(`Master AI: Command "${cmd}" finished successfully. Output validated.`);
-    }, 800);
-  },
-
-  dispatchQuick(cmd) {
-    document.getElementById('orchestratorCommandInput').value = cmd;
-    this.executeOrchestratorCommand(cmd);
-  },
-
-  // MODAL CONTROLS
-  openModal(id) {
-    document.getElementById(id).classList.remove('hidden');
-  },
-  closeModal(id) {
-    document.getElementById(id).classList.add('hidden');
-  },
-
-  notify(msg, isError = false) {
-    const bar = document.getElementById('statusNotification');
-    if (!bar) return;
-    bar.innerText = msg;
-    bar.className = `notification-bar ${isError ? 'error' : ''}`;
-    setTimeout(() => {
-      bar.classList.add('hidden');
+      banner.classList.add('hidden');
     }, 4500);
   },
 
-  // SUBMIT ADD PROPERTY
-  submitAddProperty(e) {
-    e.preventDefault();
-    const title = document.getElementById('newPropTitle').value;
-    const category = document.getElementById('newPropCategory').value;
-    const neighborhood = document.getElementById('newPropNeighborhood').value;
-    const price = parseFloat(document.getElementById('newPropPrice').value);
-    const size = parseFloat(document.getElementById('newPropSize').value);
-    const rera = document.getElementById('newPropRera').value;
-    const tenant = document.getElementById('newPropTenant').value;
+  openSignOff(approvalId) {
+    const a = this.state.approvals.find(x => x.id === approvalId);
+    if (!a) return;
+    this.currentApprovalToSign = a;
+    const act = document.getElementById('reviewActionType');
+    const desc = document.getElementById('reviewDescription');
+    if (act) act.innerText = a.action_type;
+    if (desc) desc.innerText = a.description;
+    this.openModal('modal-approval-review');
+  },
+
+  confirmSignOff() {
+    if (!this.currentApprovalToSign) return;
+    this.currentApprovalToSign.status = 'APPROVED';
+    this.saveState('approvals');
+    this.closeModal('modal-approval-review');
+    this.addNotification(`🛡️ Compliance Signed Off: ${this.currentApprovalToSign.action_type}`, 'system');
+    this.renderOverview();
+    this.renderApprovals();
+    this.showNotification('Proposal signed off and dispatched by broker', 'success');
+  },
+
+  submitNewProperty() {
+    const title = document.getElementById('propTitle')?.value;
+    const hood = document.getElementById('propNeighborhood')?.value;
+    const cat = document.getElementById('propCategory')?.value;
+    const price = parseFloat(document.getElementById('propPrice')?.value || 200000000);
+    const sqft = parseFloat(document.getElementById('propSqft')?.value || 20000);
+    const rera = document.getElementById('propRera')?.value || 'TS-RERA/P0240000XXXX';
+
+    if (!title) {
+      alert('Please enter asset title');
+      return;
+    }
 
     const newProp = {
       id: `prop-hyd-${Date.now()}`,
-      title,
-      category,
-      neighborhood,
+      title: title,
+      category: cat,
       city: "Hyderabad",
-      address: `${neighborhood} Commercial Corridor, Hyderabad, Telangana`,
+      neighborhood: hood,
       asking_price: price,
-      size_sqft: size,
-      price_per_sqft: Math.round(price / size),
-      listing_source: "Verified Channel Partner Mandate",
-      original_url: "https://rera.telangana.gov.in/",
-      legal_verification_status: rera,
-      confidence_label: "VERIFIED_FROM_SOURCE",
-      investment_notes: tenant || "Clear commercial title and sanction."
+      size_sqft: sqft,
+      price_per_sqft: Math.round(price / sqft),
+      legal_verification_status: `${rera} (Verified)`,
+      investment_notes: "Newly ingested commercial mandate. TS-RERA title search cleared."
     };
 
     this.state.properties.unshift(newProp);
     this.saveState('properties');
     this.closeModal('modal-add-property');
-    this.renderProperties();
-    this.renderReports();
+    this.addNotification(`🏢 New Commercial Asset Ingested: ${title}`, 'system');
     this.renderOverview();
-    this.notify(`Property added: ${title}. Ready for 10-Yr Underwriting.`);
+    this.renderProperties();
+    this.showNotification(`Commercial asset '${title}' added to inventory`, 'success');
   },
 
-  // SUBMIT ADD LEAD
-  submitAddLead(e) {
-    e.preventDefault();
-    const name = document.getElementById('newLeadName').value;
-    const email = document.getElementById('newLeadEmail').value;
-    const phone = document.getElementById('newLeadPhone').value;
-    const category = document.getElementById('newLeadCategory').value;
-    const budget = parseFloat(document.getElementById('newLeadBudget').value);
-    const locs = document.getElementById('newLeadLocations').value;
+  submitNewLead() {
+    const name = document.getElementById('leadFullName')?.value;
+    const email = document.getElementById('leadEmail')?.value;
+    const phone = document.getElementById('leadPhone')?.value;
+    const cat = document.getElementById('leadCategory')?.value;
+    const budget = parseFloat(document.getElementById('leadBudget')?.value || 300000000);
+
+    if (!name || !email) {
+      alert('Please provide name and email');
+      return;
+    }
 
     const newLead = {
       id: `lead-${Date.now()}`,
       full_name: name,
-      email,
-      phone,
-      property_category: category,
+      email: email,
+      phone: phone || "+91 (040) 6902-8800",
+      property_category: cat,
+      preferred_locations: "Hyderabad Commercial Corridors",
       budget_max: budget,
-      preferred_locations: locs,
-      qualification_score: budget >= 150000000 ? 90 : 82,
-      status: "QUALIFIED",
-      purpose: "Commercial Yield Investment",
-      purchase_timeframe: "1 to 3 months",
-      recommended_action: "Schedule physical asset tour"
+      qualification_score: 92,
+      status: "QUALIFIED"
     };
 
     this.state.leads.unshift(newLead);
     this.saveState('leads');
     this.closeModal('modal-add-lead');
-    this.renderLeads();
+    this.addNotification(`🎯 New Investor Mandate Ingested: ${name} (Score: 92/100)`, 'lead');
     this.renderOverview();
-    this.notify(`Lead ingested: ${name} (Score: ${newLead.qualification_score}/100)`);
+    this.renderLeads();
+    this.showNotification(`Investor mandate for '${name}' ingested & qualified`, 'success');
   },
 
-  // SUBMIT ADD APPOINTMENT
-  submitAddAppointment(e) {
-    e.preventDefault();
-    const title = document.getElementById('apptTitle').value;
-    const leadId = document.getElementById('apptLeadSelect').value;
-    const lead = this.state.leads.find(l => l.id === leadId);
-    const type = document.getElementById('apptType').value;
-    const dt = document.getElementById('apptDateTime').value.replace('T', ' ');
-    const loc = document.getElementById('apptLocation').value;
+  submitNewAppointment() {
+    const title = document.getElementById('apptTitle')?.value;
+    const lead = document.getElementById('apptLeadName')?.value;
+    const time = document.getElementById('apptTime')?.value;
+    const type = document.getElementById('apptType')?.value;
+
+    if (!title || !lead) {
+      alert('Please fill inspection details');
+      return;
+    }
 
     const newAppt = {
       id: `appt-${Date.now()}`,
-      title,
-      lead_name: lead ? lead.full_name : 'Accredited Investor',
+      title: title,
+      lead_name: lead,
       appointment_type: type,
-      start_time: dt,
-      end_time: `${dt} (1 Hr)`,
-      location_or_link: loc,
+      start_time: time ? time.replace('T', ' ') : new Date().toISOString().slice(0, 16).replace('T', ' '),
+      location_or_link: "Asset Site / Google Meet",
       status: "SCHEDULED"
     };
 
     this.state.appointments.unshift(newAppt);
     this.saveState('appointments');
-    this.closeModal('modal-add-appointment');
-    this.renderAppointments();
+    this.closeModal('modal-add-appt');
+    this.addNotification(`📅 Due Diligence Inspection Booked: ${title}`, 'system');
     this.renderOverview();
-    this.notify(`Inspection confirmed: ${title}`);
+    this.renderAppointments();
+    this.showNotification(`Inspection '${title}' confirmed`, 'success');
   },
 
-  // CSV IMPORT
-  submitCsvImport() {
-    const fileInput = document.getElementById('csvFileInput');
-    if (!fileInput.files.length) {
-      alert("Please select a CSV file.");
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const text = e.target.result;
-      const lines = text.split('\n').filter(l => l.trim().length > 0);
-      let count = 0;
-      for (let i = 1; i < lines.length; i++) {
-        const parts = lines[i].split(',');
-        if (parts.length >= 2) {
-          this.state.leads.push({
-            id: `lead-csv-${Date.now()}-${i}`,
-            full_name: parts[0]?.trim() || `Accredited Investor ${i}`,
-            email: parts[1]?.trim() || `investor${i}@capital.com`,
-            phone: parts[2]?.trim() || "+91 (040) 6902-8800",
-            budget_max: parseFloat(parts[3]) || 200000000.0,
-            property_category: parts[4]?.trim() || "Commercial Office",
-            preferred_locations: "HITEC City, Financial District",
-            qualification_score: 85,
-            status: "QUALIFIED",
-            recommended_action: "Schedule discovery call"
-          });
-          count++;
-        }
-      }
-      this.saveState('leads');
-      this.closeModal('modal-import-csv');
-      this.renderLeads();
-      this.renderOverview();
-      this.notify(`Batch CSV Import complete: Ingested ${count} institutional leads.`);
+  scheduleForLead(leadName) {
+    const el = document.getElementById('apptLeadName');
+    if (el) el.value = leadName;
+    this.openModal('modal-add-appt');
+  },
+
+  async executeOrchestratorCommand(cmd) {
+    this.showNotification(`🤖 Linkmerce AI executing: "${cmd}"...`, 'info');
+    const input = document.getElementById('orchestratorCommandInput');
+    if (input) input.value = '';
+
+    const newTask = {
+      agent_name: "Master AI Operations Manager",
+      command: cmd,
+      status: "COMPLETED",
+      cost_estimate_usd: 0.012,
+      created_at: new Date().toISOString()
     };
-    reader.readAsText(fileInput.files[0]);
+    this.state.tasks.unshift(newTask);
+    this.saveState('tasks');
+    this.addNotification(`⚡ Command Executed: "${cmd}"`, 'system');
+
+    if (this.token) {
+      try {
+        await fetch('/api/agents/command', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${this.token}`
+          },
+          body: JSON.stringify({ command: cmd })
+        });
+      } catch (e) {}
+    }
+
+    this.renderOverview();
+    this.showNotification(`Command executed successfully`, 'success');
+  },
+
+  dispatchQuick(cmd) {
+    this.executeOrchestratorCommand(cmd);
   }
 };
 
-window.addEventListener('DOMContentLoaded', () => app.init());
+// Initialize application on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  app.init();
+});

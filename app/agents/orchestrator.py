@@ -14,6 +14,7 @@ from app.agents.crm_manager import CRMManagerAgent
 from app.agents.compliance_qa import ComplianceQAAgent
 from app.agents.sales_growth import SalesGrowthAgent
 from app.agents.finance_monitor import FinanceMonitorAgent
+from app.agents.marketing_promotion import MarketingPromotionAgent
 from app.models.entities import AgentTask, ApprovalRequest
 
 class MasterOperationsOrchestrator(BaseAgent):
@@ -21,7 +22,7 @@ class MasterOperationsOrchestrator(BaseAgent):
         super().__init__(
             name="Master AI Operations Manager",
             role="Central Operations Orchestrator and Workflow Director",
-            description="Coordinates all 9 specialized departments, parses business commands, queues tasks, handles retries, and compiles daily performance reports."
+            description="Coordinates all 10 specialized departments, parses business commands, queues tasks, handles retries, and compiles daily performance reports."
         )
         # Register specialized department agents
         self.departments: Dict[str, BaseAgent] = {
@@ -33,7 +34,8 @@ class MasterOperationsOrchestrator(BaseAgent):
             "crm_manager": CRMManagerAgent(),
             "compliance_qa": ComplianceQAAgent(),
             "sales_growth": SalesGrowthAgent(),
-            "finance_monitor": FinanceMonitorAgent()
+            "finance_monitor": FinanceMonitorAgent(),
+            "marketing_promotion": MarketingPromotionAgent()
         }
 
     def get_agent_registry(self) -> List[Dict[str, Any]]:
@@ -57,6 +59,9 @@ class MasterOperationsOrchestrator(BaseAgent):
                 return {"target": "property_research", "payload": {"category": "Residential"}}
             return {"target": "property_research", "payload": {}}
 
+        elif any(w in cmd_lower for w in ["promote", "marketing", "promotion", "blog", "post", "social", "campaign", "seo", "article"]):
+            return {"target": "marketing_promotion", "payload": {}}
+
         elif any(w in cmd_lower for w in ["buyer", "leads", "lead gen", "potential buyers", "inquiries"]):
             return {"target": "buyer_lead", "payload": {}}
 
@@ -75,7 +80,7 @@ class MasterOperationsOrchestrator(BaseAgent):
         elif any(w in cmd_lower for w in ["compliance", "audit", "verify", "gate", "stale"]):
             return {"target": "compliance_qa", "payload": {}}
 
-        elif any(w in cmd_lower for w in ["revenue", "finance", "mrr", "cost", "financial", "margin"]):
+        elif any(w in cmd_lower for w in ["revenue", "finance", "mrr", "cost", "financial", "margin", "commission", "earning"]):
             return {"target": "finance_monitor", "payload": {}}
 
         elif any(w in cmd_lower for w in ["crm", "client", "workspace", "status"]):
@@ -111,66 +116,65 @@ class MasterOperationsOrchestrator(BaseAgent):
             agent_name=self.name,
             command=command,
             input_payload_json=json.dumps(payload),
-            status="RUNNING",
-            retry_count=0,
-            cost_estimate_usd=0.01
+            status="RUNNING"
         )
         db.add(task_record)
         db.commit()
+        db.refresh(task_record)
 
-        intent = self.parse_intent(command)
-        target = intent["target"]
-        merged_payload = {**intent.get("payload", {}), **payload}
+        parsed = self.parse_intent(command)
+        target = parsed["target"]
+        merged_payload = {**parsed.get("payload", {}), **payload}
 
         try:
             if target == "daily_report":
-                # Synthesize cross-department operations overview
-                crm_res = self.departments["crm_manager"].execute(tenant_id, "get_summary", {}, db)
-                fin_res = self.departments["finance_monitor"].execute(tenant_id, "get_revenue", {}, db)
-                qa_res = self.departments["compliance_qa"].execute(tenant_id, "audit", {}, db)
-
-                result_data = {
-                    "report_type": "DAILY_BUSINESS_PERFORMANCE",
-                    "timestamp": datetime.now(timezone.utc).isoformat(),
-                    "crm_overview": crm_res.get("summary", {}),
-                    "financial_kpis": fin_res.get("metrics", {}),
-                    "compliance_audit": {
-                        "properties_flagged": qa_res.get("flagged_properties_count", 0),
-                        "leads_flagged": qa_res.get("flagged_leads_count", 0)
-                    }
-                }
-                msg = "Daily executive performance report synthesized successfully."
+                result = self._execute_daily_business_brief(tenant_id, db)
             else:
                 agent = self.departments[target]
-                result_data = agent.execute(tenant_id, command, merged_payload, db)
-                msg = result_data.get("message", "Task executed successfully.")
+                result = agent.execute(tenant_id, command, merged_payload, db)
 
             task_record.status = "COMPLETED"
-            task_record.output_payload_json = json.dumps(result_data, default=str)
-            db.commit()
-
+            task_record.output_payload_json = json.dumps(result)
             self.status = "IDLE"
             self.current_task = None
+            db.commit()
+
             return {
                 "status": "SUCCESS",
-                "message": msg,
                 "task_id": task_record.id,
+                "command": command,
                 "target_department": target,
-                "result": result_data
+                "result": result
             }
 
         except Exception as e:
-            self.failed_runs += 1
-            self.error_details = str(e)
             task_record.status = "FAILED"
             task_record.error_details = str(e)
-            db.commit()
             self.status = "ERROR"
+            db.commit()
             return {
-                "status": "FAILED",
-                "message": f"Execution error in department [{target}]: {str(e)}",
+                "status": "ERROR",
                 "task_id": task_record.id,
+                "command": command,
                 "error": str(e)
             }
+
+    def _execute_daily_business_brief(self, tenant_id: str, db: Session) -> Dict[str, Any]:
+        """
+        Executes an autonomous operational brief across all 10 departments.
+        """
+        brief = {
+            "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            "department_summaries": {}
+        }
+        for name, agent in self.departments.items():
+            brief["department_summaries"][name] = {
+                "name": agent.name,
+                "role": agent.role,
+                "status": agent.status,
+                "total_runs": agent.total_runs,
+                "total_cost_usd": round(agent.total_cost_usd, 4)
+            }
+        return brief
 
 orchestrator = MasterOperationsOrchestrator()
