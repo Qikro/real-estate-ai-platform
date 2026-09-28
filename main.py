@@ -58,6 +58,17 @@ def health_check():
         "ai_orchestrator": "ONLINE"
     }
 
+@app.get("/api/cron/daily-ops")
+@app.post("/api/cron/daily-ops")
+def run_cron_daily_ops():
+    from daily_cycle import run_daily_cycle
+    summary = run_daily_cycle()
+    return {
+        "status": "SUCCESS",
+        "message": "Daily institutional cycle completed",
+        "summary": summary
+    }
+
 # Mount static frontend
 static_dir = os.path.join(os.path.dirname(__file__), "app", "static")
 os.makedirs(static_dir, exist_ok=True)
@@ -65,6 +76,4 @@ app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
 
 if __name__ == "__main__":
     import uvicorn
-    seed_database()
-    print(f"[*] Starting {settings.APP_NAME} on http://localhost:8000 ...")
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run("main:app", host=settings.HOST, port=settings.PORT, reload=settings.DEBUG)

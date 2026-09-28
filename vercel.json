@@ -1,5 +1,11 @@
 {
   "version": 2,
+  "crons": [
+    {
+      "path": "/api/cron/daily-ops",
+      "schedule": "30 3 * * *"
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
