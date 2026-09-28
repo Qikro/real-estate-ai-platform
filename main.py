@@ -58,7 +58,8 @@ def health_check():
         "target_city": settings.INITIAL_TARGET_CITY,
         "database": "CONNECTED",
         "ai_orchestrator": "ONLINE",
-        "paypal_gateway": "ONLINE"
+        "paypal_gateway": "ONLINE",
+        "campaign_interval": "10_MINUTES_ACTIVE"
     }
 
 @app.get("/api/finance/commission-target")
@@ -126,6 +127,17 @@ def run_cron_hourly_ops():
     return {
         "status": "SUCCESS",
         "message": "Hourly autonomous revenue & promotion cycle completed",
+        "summary": summary
+    }
+
+@app.get("/api/cron/campaign-ops")
+@app.post("/api/cron/campaign-ops")
+def run_cron_campaign_ops():
+    from campaign_cycle import run_campaign_cycle
+    summary = run_campaign_cycle()
+    return {
+        "status": "SUCCESS",
+        "message": "10-Minute campaign & teammate coordination cycle completed",
         "summary": summary
     }
 

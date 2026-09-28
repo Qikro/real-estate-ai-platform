@@ -79,7 +79,7 @@
 
       <div class="sidebar-footer">
         <div class="connection-status">
-          <span class="pulse-indicator"></span> ⚡ Hourly Autopilot: Active (11 Agents)
+          <span class="pulse-indicator"></span> ⚡ 10-Min Campaign & Teammate Autopilot: Active (11 Desks)
         </div>
         <div class="user-strip">
           <span class="user-avatar">LM</span>
@@ -150,6 +150,7 @@
           <span class="strip-remaining" id="stripRemainingText">$127.50 remaining to hit daily target</span>
         </div>
         <div class="strip-right">
+          <button class="btn btn-sm btn-primary" onclick="app.runCampaignCycleNow()">🚀 10-Min Campaign</button>
           <button class="btn btn-sm btn-accent" onclick="app.openPayPalModal('COMMISSION_ESCROW', 1000.0)">💳 PayPal Payment Gateway</button>
           <button class="btn btn-sm btn-outline" onclick="app.openModal('modal-settle-commission')">💰 Settle Deal</button>
           <button class="btn btn-sm btn-outline" onclick="app.runHourlyCycleNow()">⚡ Run Hourly</button>
@@ -215,6 +216,69 @@
               <div class="kpi-label">Pending Compliance Reviews</div>
               <div class="kpi-val text-warning" id="kpiPendingApprovals">0</div>
               <div class="kpi-sub">Human-in-the-loop gates</div>
+            </div>
+          </div>
+
+
+          <!-- 10-MINUTE TEAMMATE WORKSTREAM UPDATES -->
+          <div class="panel" style="margin-bottom: 1.5rem; border: 1px solid rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.03);">
+            <div class="panel-header">
+              <div>
+                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="pulse-indicator"></span> ⚡ Live Teammate Workstreams & 10-Minute Campaign Telemetry
+                </h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">
+                  Autonomous 10-minute cadence coordinating underwriting, sourcing, diligence, syndication, and investor relations
+                </p>
+              </div>
+              <button class="btn btn-sm btn-primary" onclick="app.runCampaignCycleNow()">🚀 Trigger 10-Min Campaign & Sync</button>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; padding: 1rem;">
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: #10b981;">💰 Val</strong>
+                  <span class="badge badge-success">Online</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Finance & Underwriting</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.4rem;" id="teammateValStatus">$912.00 / $1,000 Target (91.2%)</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">PayPal 97.07% Net Margin</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: #6366f1;">🏢 Scout</strong>
+                  <span class="badge badge-success">Sourcing</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Commercial RE Sourcing</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.4rem;" id="teammateScoutStatus">16 Grade-A Assets (₹285 Cr)</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">12 Institutional Mandates</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: #f59e0b;">🛡️ Lex</strong>
+                  <span class="badge badge-warning">Diligence</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">RERA & Title Diligence</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.4rem;" id="teammateLexStatus">30-Yr EC Clear (TS-RERA)</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">4 Compliance Gate Items</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: #ec4899;">📢 Echo</strong>
+                  <span class="badge badge-accent">10-Min Live</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Campaign & Copy Lead</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.4rem;" id="teammateEchoStatus">4 Channels Dispatched</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">4,850+ Investor Reach</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: #06b6d4;">🤝 Aria</strong>
+                  <span class="badge badge-info">Concierge</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Investor Relations</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.4rem;" id="teammateAriaStatus">9 Site Visits Booked</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Zero Schedule Conflicts</div>
+              </div>
             </div>
           </div>
 

@@ -1,0 +1,38 @@
+name: Linkmerce Online - 10-Minute Campaign & Teammate Coordination Cycle
+
+on:
+  schedule:
+    # Trigger every 10 minutes on GitHub runners
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  campaign-operations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest httpx
+
+      - name: Seed Database
+        run: |
+          python seed_data.py
+
+      - name: Execute 10-Minute Campaign & Teammate Sync
+        run: |
+          python campaign_cycle.py
+
+      - name: Run Test Suite
+        run: |
+          pytest tests/test_api_endpoints.py tests/test_suite.py

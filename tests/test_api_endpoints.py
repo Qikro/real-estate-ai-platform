@@ -12,6 +12,7 @@ def test_api_and_static_frontend():
     assert res_health.status_code == 200
     assert res_health.json()["status"] == "HEALTHY"
     assert res_health.json().get("paypal_gateway") == "ONLINE"
+    assert res_health.json().get("campaign_interval") == "10_MINUTES_ACTIVE"
 
     # Static UI
     res_ui = client.get("/")
@@ -101,3 +102,14 @@ def test_api_and_static_frontend():
     assert res_comm_target.status_code == 200
     assert res_comm_target.json()["daily_target_usd"] == 1000.0
     assert res_comm_target.json()["progress_percent"] == 100.0
+
+    # 10-Minute Campaign & Teammate Sync Endpoint
+    res_campaign = client.post("/api/cron/campaign-ops")
+    assert res_campaign.status_code == 200
+    assert res_campaign.json()["status"] == "SUCCESS"
+    assert "teammates" in res_campaign.json()["summary"]
+    assert "val" in res_campaign.json()["summary"]["teammates"]
+    assert "scout" in res_campaign.json()["summary"]["teammates"]
+    assert "lex" in res_campaign.json()["summary"]["teammates"]
+    assert "echo" in res_campaign.json()["summary"]["teammates"]
+    assert "aria" in res_campaign.json()["summary"]["teammates"]
