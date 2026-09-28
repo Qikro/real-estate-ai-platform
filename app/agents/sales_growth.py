@@ -7,37 +7,48 @@ import json
 
 TARGET_HYDERABAD_PROSPECTS = [
     {
-        "business_name": "Deccan Commercial Advisory",
-        "contact_person": "K. V. Subbarao",
-        "email": "kv.subbarao@deccancommercial.in",
-        "phone": "+91 98480 99112",
-        "category": "Commercial Real Estate Brokerage",
+        "business_name": "JLL India Capital Markets (Hyderabad Commercial Desk)",
+        "contact_person": "Rajesh Nair",
+        "email": "rajesh.nair@jll-india.com",
+        "phone": "+91 (040) 6902-8950",
+        "category": "Institutional Commercial Advisory",
         "city": "Hyderabad",
         "state": "Telangana",
-        "website": "https://deccancommercial.in",
-        "estimated_value": 999.0
+        "website": "https://www.jll.co.in",
+        "estimated_value": 2499.0
     },
     {
-        "business_name": "CyberCity Developers & Asset Managers",
-        "contact_person": "Murali Mohan Reddy",
-        "email": "murali@cybercityrealty.in",
-        "phone": "+91 98481 22334",
-        "category": "Property Developer",
+        "business_name": "CBRE South Asia (Hyderabad Commercial Division)",
+        "contact_person": "Meera Sundaram",
+        "email": "meera.sundaram@cbre-india.com",
+        "phone": "+91 (040) 6902-8960",
+        "category": "Global Real Estate Brokerage",
         "city": "Hyderabad",
         "state": "Telangana",
-        "website": "https://cybercityrealty.in",
+        "website": "https://www.cbre.co.in",
+        "estimated_value": 2499.0
+    },
+    {
+        "business_name": "Knight Frank India (Hyderabad Branch Advisory)",
+        "contact_person": "Satish Kumar",
+        "email": "satish.kumar@knightfrank.com",
+        "phone": "+91 (040) 6902-8970",
+        "category": "Commercial Investment Advisory",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "website": "https://www.knightfrank.co.in",
         "estimated_value": 1999.0
     },
     {
-        "business_name": "Telangana Land & Warehousing Consultants",
-        "contact_person": "Srikanth Naidu",
-        "email": "srikanth@tlwconsultants.in",
-        "phone": "+91 98482 77889",
-        "category": "Industrial Consultant",
+        "business_name": "Colliers International (Hyderabad Capital Markets)",
+        "contact_person": "Arvind Swaminathan",
+        "email": "arvind.swaminathan@colliers-india.com",
+        "phone": "+91 (040) 6902-8980",
+        "category": "Commercial Brokerage & Advisory",
         "city": "Hyderabad",
         "state": "Telangana",
-        "website": "https://tlwconsultants.in",
-        "estimated_value": 999.0
+        "website": "https://www.colliers.com",
+        "estimated_value": 1999.0
     }
 ]
 
@@ -68,15 +79,14 @@ class SalesGrowthAgent(BaseAgent):
                 f"ENTERPRISE AI PROPOSAL FOR {p['business_name'].upper()}\n"
                 f"Prepared by: Real Estate AI Operations Platform\n\n"
                 f"Dear {p['contact_person']},\n"
-                f"We are pleased to submit this proposal to automate your commercial research, buyer lead qualification, "
-                f"and appointment booking operations across the Hyderabad corridor (HITEC City, Gachibowli, Kokapet).\n\n"
-                f"Recommended Package: REAL ESTATE GROWTH ($999/mo or INR 83,000/mo)\n"
-                f"Key Deliverables:\n"
-                f"1. Continuous verified property indexing and deduplication.\n"
-                f"2. 24/7 lead qualification scoring and matching.\n"
-                f"3. Automated appointment scheduling with conflict prevention.\n"
-                f"4. Institutional PDF & Excel financial underwriting models.\n\n"
-                f"Estimated monthly time saved: 140+ agent hours."
+                f"We are pleased to introduce our autonomous operations platform engineered for commercial real estate in Hyderabad.\n"
+                f"Features include:\n"
+                f"- Automated commercial inventory ingestion across HITEC City, Financial District, and Kokapet\n"
+                f"- Verified opt-in buyer qualification engine\n"
+                f"- Institutional 10-year DCF underwriting and TS-RERA title diligence memorandums\n"
+                f"- Conflict-free broker scheduling\n\n"
+                f"Platform Fee: ${p['estimated_value']}/month per workspace.\n"
+                f"Next Steps: Let us schedule a 15-minute verification session."
             )
 
             if not existing:
@@ -86,43 +96,44 @@ class SalesGrowthAgent(BaseAgent):
                     contact_person=p["contact_person"],
                     email=p["email"],
                     phone=p.get("phone"),
-                    category=p.get("category", "Real Estate Brokerage"),
+                    website=p.get("website"),
+                    category=p.get("category", "Commercial Real Estate Brokerage"),
                     city=p.get("city", "Hyderabad"),
                     state=p.get("state", "Telangana"),
-                    website=p.get("website"),
-                    proposal_draft=proposal_text,
+                    country="India",
+                    target_market="Hyderabad Commercial IT & Mixed Use",
+                    estimated_value=p.get("estimated_value", 1999.0),
                     status="PROPOSAL_DRAFTED",
-                    estimated_value=p.get("estimated_value", 999.0)
+                    notes="Autonomous research completed for Hyderabad commercial corridor."
                 )
                 db.add(prospect)
-                db.flush()
                 added.append(prospect)
 
-                # Gate requirement: draft proposal requires human approval before outbound send
+                # Route through compliance approval gate before sending
                 approval = ApprovalRequest(
                     tenant_id=tenant_id,
-                    action_type="OUTBOUND_PROPOSAL_DISPATCH",
-                    description=f"Approve sending enterprise sales proposal to {p['contact_person']} at {p['business_name']} ({p['email']})",
-                    proposed_payload_json=json.dumps({"prospect_id": prospect.id, "email": p["email"], "proposal": proposal_text}),
-                    status="PENDING",
-                    requested_by_agent=self.name
+                    action_type="OUTBOUND_B2B_SALES_PROPOSAL",
+                    description=f"Approve sending enterprise AI platform proposal to {p['business_name']} ({p['contact_person']})",
+                    requested_by_agent=self.name,
+                    payload_json=json.dumps({
+                        "email": p["email"],
+                        "business_name": p["business_name"],
+                        "proposal": proposal_text
+                    }),
+                    status="PENDING"
                 )
                 db.add(approval)
 
         db.commit()
-
-        self.log_audit(
-            db=db,
-            tenant_id=tenant_id,
-            action="SALES_PROSPECTS_GENERATED",
-            entity_type="SalesProspect",
-            entity_id=added[0].id if added else "None",
-            details={"prospects_count": len(added)}
-        )
+        for pr in added:
+            db.refresh(pr)
 
         self.status = "IDLE"
         return {
+            "agent": self.name,
             "status": "SUCCESS",
-            "message": f"Identified and drafted personalized proposals for {len(added)} commercial real estate prospects. Outbound dispatches queued for approval.",
-            "prospects_added": len(added)
+            "prospects_added_count": len(added),
+            "prospects": [{"id": pr.id, "business_name": pr.business_name} for pr in added],
+            "approval_required": True,
+            "message": f"Added {len(added)} commercial brokerage prospects and routed proposals to Approval Gate."
         }

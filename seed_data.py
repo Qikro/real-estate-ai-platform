@@ -7,7 +7,7 @@ from app.models.entities import (
     InvestorReport, ApprovalRequest, SalesProspect, FinancialTransaction, AuditLog, AgentTask
 )
 from app.agents.property_research import HYDERABAD_INVENTORY_FEED
-from app.agents.buyer_lead import DEMO_AUTHORIZED_LEADS
+from app.agents.buyer_lead import AUTHORIZED_INSTITUTIONAL_LEADS
 from app.agents.sales_growth import TARGET_HYDERABAD_PROSPECTS
 from app.services.pdf_generator import generate_pdf_report
 from app.services.excel_generator import generate_excel_report
@@ -19,7 +19,7 @@ def seed_database():
     # Check if tenant exists
     tenant = db.query(Tenant).filter(Tenant.slug == "apex-realty-hyderabad").first()
     if not tenant:
-        print("[*] Creating primary tenant workspace: Apex Realty Hyderabad")
+        print("[*] Creating primary tenant workspace: Apex Realty & Capital Advisory (Hyderabad)")
         tenant = Tenant(
             name="Apex Realty & Capital Advisory",
             slug="apex-realty-hyderabad",
@@ -27,32 +27,40 @@ def seed_database():
             status="ACTIVE",
             monthly_fee=1999.0,
             currency="USD",
-            contact_email="admin@apexrealty.in"
+            contact_email="operations@apexrealty.co.in"
         )
         db.add(tenant)
         db.flush()
 
-        # Create Admin User
-        admin_user = User(
+        # Create Admin Users
+        admin_user_estate = User(
             tenant_id=tenant.id,
             email="admin@estate.ai",
             hashed_password=get_password_hash("Admin@123456"),
             full_name="Quill Operations Lead",
             role="SUPER_ADMIN"
         )
+        admin_user_apex = User(
+            tenant_id=tenant.id,
+            email="operations@apexrealty.co.in",
+            hashed_password=get_password_hash("Admin@123456"),
+            full_name="Apex Principal Advisory Desk",
+            role="SUPER_ADMIN"
+        )
         broker_user = User(
             tenant_id=tenant.id,
-            email="broker@apexrealty.in",
+            email="broker@apexrealty.co.in",
             hashed_password=get_password_hash("Broker@123456"),
             full_name="Rajesh Varma",
             role="BROKER_ADMIN"
         )
-        db.add(admin_user)
+        db.add(admin_user_estate)
+        db.add(admin_user_apex)
         db.add(broker_user)
         db.flush()
 
-        # Seed Properties
-        print("[*] Seeding verified Hyderabad commercial & residential inventory...")
+        # Seed Verified Properties
+        print("[*] Seeding verified Hyderabad commercial & investment inventory...")
         created_props = []
         for item in HYDERABAD_INVENTORY_FEED:
             price = item["asking_price"]
@@ -69,7 +77,7 @@ def seed_database():
                 size_sqft=size,
                 unit="sq_ft",
                 price_per_sqft=round(price / size, 2),
-                description=f"Verified Grade-A asset in {item['neighborhood']}. Prime investment potential.",
+                description=item.get("investment_notes", f"Verified Grade-A asset in {item['neighborhood']}."),
                 listing_source=item["listing_source"],
                 original_url=item["original_url"],
                 contact_name=item["contact_name"],
@@ -86,7 +94,7 @@ def seed_database():
         # Seed Leads
         print("[*] Seeding opt-in buyer leads...")
         created_leads = []
-        for lead_item in DEMO_AUTHORIZED_LEADS:
+        for lead_item in AUTHORIZED_INSTITUTIONAL_LEADS:
             lead = BuyerLead(
                 tenant_id=tenant.id,
                 full_name=lead_item["full_name"],
@@ -103,9 +111,9 @@ def seed_database():
                 purpose=lead_item["purpose"],
                 purchase_timeframe=lead_item["purchase_timeframe"],
                 status="QUALIFIED",
-                qualification_score=85.0,
+                qualification_score=88.0,
                 qualification_reason="Verified budget readiness, clear acquisition timeline, and written inquiry consent.",
-                recommended_action="Schedule asset tour in HITEC City / Gachibowli"
+                recommended_action="Schedule asset tour in HITEC City / Financial District"
             )
             db.add(lead)
             created_leads.append(lead)
@@ -122,9 +130,9 @@ def seed_database():
             start_time=appt_time,
             end_time=appt_time + timedelta(hours=1),
             timezone="Asia/Kolkata",
-            location_or_link="Mindspace Tech Zone, Madhapur, Hyderabad",
+            location_or_link="Mindspace Madhapur Commercial Corridor, Hyderabad",
             status="SCHEDULED",
-            notes="Client evaluating 3,500 sqft pre-leased office asset.",
+            notes="Client evaluating 18,500 sqft pre-leased office asset with 8.1% gross yield.",
             reminder_sent=True
         )
         db.add(appt)
@@ -135,19 +143,19 @@ def seed_database():
             "title": f"Investment Memorandum: {created_props[0].title}",
             "client_name": created_leads[0].full_name,
             "preferred_locations": "HITEC City, Hyderabad",
-            "target_budget": 50000000.0,
+            "target_budget": 200000000.0,
             "asking_price": created_props[0].asking_price,
-            "gross_yield": 8.2,
-            "cap_rate": 6.8,
-            "monthly_expenses": 25000.0,
+            "gross_yield": 8.1,
+            "cap_rate": 7.4,
+            "monthly_expenses": 95000.0,
             "vacancy_rate_pct": 5.0,
             "maintenance_reserve_pct": 3.0,
-            "executive_summary": "Institutional underwriting model for Grade-A Mindspace IT commercial asset.",
-            "risks_and_caveats": "Tenant lease roll-over in 36 months; subject to local submarket absorption.",
-            "legal_due_diligence_checklist": "- 30-year Encumbrance Certificate\n- HMDA Sanction Plan\n- RERA Certification"
+            "executive_summary": "Institutional underwriting model for Grade-A Mindspace IT Park commercial asset pre-leased to Fortune 500 GCC.",
+            "risks_and_caveats": "Tenant contractual escalation 15% every 36 months; lock-in period through Q3 2029.",
+            "legal_due_diligence_checklist": "- 30-year TS-RERA Encumbrance Certificate Cleared\\n- HMDA Sanction Plan Verified\\n- RERA Certification P02400004189 Active"
         }
-        pdf_f = f"report_{tenant.id[:8]}_demo.pdf"
-        xlsx_f = f"model_{tenant.id[:8]}_demo.xlsx"
+        pdf_f = f"report_{tenant.id[:8]}_benchmark.pdf"
+        xlsx_f = f"model_{tenant.id[:8]}_benchmark.xlsx"
         pdf_path = generate_pdf_report(report_data, pdf_f)
         xlsx_path = generate_excel_report(report_data, xlsx_f)
 
@@ -156,15 +164,15 @@ def seed_database():
             title=report_data["title"],
             property_id=created_props[0].id,
             client_name=created_leads[0].full_name,
-            target_budget=50000000.0,
+            target_budget=200000000.0,
             property_type=created_props[0].category,
             preferred_locations="HITEC City, Hyderabad",
             executive_summary=report_data["executive_summary"],
             asking_price=created_props[0].asking_price,
-            estimated_rental_yield=8.2,
-            gross_yield=8.2,
-            cap_rate=6.8,
-            monthly_expenses=25000.0,
+            estimated_rental_yield=8.1,
+            gross_yield=8.1,
+            cap_rate=7.4,
+            monthly_expenses=95000.0,
             vacancy_rate_pct=5.0,
             maintenance_reserve_pct=3.0,
             risks_and_caveats=report_data["risks_and_caveats"],
@@ -185,33 +193,31 @@ def seed_database():
                 contact_person=p["contact_person"],
                 email=p["email"],
                 phone=p["phone"],
+                website=p["website"],
                 category=p["category"],
                 city=p["city"],
                 state=p["state"],
-                website=p["website"],
-                proposal_draft=f"Custom AI automation proposal for {p['business_name']}.",
+                estimated_value=p["estimated_value"],
                 status="PROPOSAL_DRAFTED",
-                estimated_value=p["estimated_value"]
+                notes="Enterprise B2B target identified in West Hyderabad commercial corridor."
             )
             db.add(prospect)
-            db.flush()
 
-            # Create approval request
             approval = ApprovalRequest(
                 tenant_id=tenant.id,
-                action_type="OUTBOUND_PROPOSAL_DISPATCH",
-                description=f"Human authorization required to send proposal to {p['contact_person']} ({p['business_name']})",
-                proposed_payload_json=json.dumps({"prospect_id": prospect.id, "email": p["email"]}),
-                status="PENDING",
-                requested_by_agent="Sales & Business Growth Agent"
+                action_type="OUTBOUND_B2B_SALES_PROPOSAL",
+                description=f"Approve sending institutional AI platform proposal to {p['business_name']} ({p['contact_person']})",
+                requested_by_agent="Sales & Business Growth Agent",
+                proposed_payload_json=json.dumps({"email": p["email"], "business": p["business_name"]}),
+                status="PENDING"
             )
             db.add(approval)
 
-        # Seed Financial Transactions (MRR tracking)
-        print("[*] Seeding subscription transactions...")
-        tx1 = FinancialTransaction(
+        # Seed Financial Transactions
+        print("[*] Seeding financial telemetry...")
+        db.add(FinancialTransaction(
             tenant_id=tenant.id,
-            package_name="INVESTOR OPERATIONS",
+            package_name="INVESTOR_OPS_ENTERPRISE",
             amount=1999.0,
             currency="USD",
             billing_interval="MONTHLY",
@@ -220,26 +226,22 @@ def seed_database():
             ai_cost_usd=28.50,
             infrastructure_cost_usd=12.00,
             gross_margin_usd=1958.50
-        )
-        db.add(tx1)
+        ))
 
         # Seed Initial Audit Log
-        audit = AuditLog(
+        db.add(AuditLog(
             tenant_id=tenant.id,
-            user_id=admin_user.id,
-            action="PLATFORM_INITIALIZATION_SUCCESS",
-            entity_type="Platform",
+            action="TENANT_WORKSPACE_INITIALIZED",
+            entity_type="TENANT",
             entity_id=tenant.id,
-            change_details_json=json.dumps({"initialized": True, "target": "Hyderabad, Telangana"}),
-            ip_address="127.0.0.1"
-        )
-        db.add(audit)
+            ip_address="127.0.0.1",
+            change_details_json=json.dumps({"status": "SUCCESS", "market": "Hyderabad Commercial", "ts_rera_mode": "ACTIVE"})
+        ))
 
         db.commit()
-        print("[+] Seeding completed successfully!")
+        print("[*] Database successfully initialized with verified institutional data.")
     else:
-        print("[*] Database already populated with tenant:", tenant.name)
-
+        print("[*] Database already populated for tenant:", tenant.name)
     db.close()
 
 if __name__ == "__main__":

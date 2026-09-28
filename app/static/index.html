@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real Estate AI Operations Platform | Hyderabad & Global</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>Apex Estate AI | Real Estate AI Operations Platform</title>
+  <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,18 +14,18 @@
     <!-- SIDEBAR NAVIGATION -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <div class="logo-mark">RE</div>
+        <div class="logo-mark">AP</div>
         <div class="logo-text">
-          <span class="brand-title">ESTATE<span class="accent">.AI</span></span>
-          <span class="brand-sub">Operations Command</span>
+          <span class="brand-title">APEX<span class="accent">.AI</span></span>
+          <span class="brand-sub">Real Estate Operations</span>
         </div>
       </div>
 
       <div class="workspace-pill">
         <div class="ws-dot active"></div>
         <div class="ws-info">
-          <span class="ws-name" id="currentWorkspaceName">Apex Realty & Capital</span>
-          <span class="ws-role" id="currentUserRole">SUPER_ADMIN (Hyderabad)</span>
+          <span class="ws-name" id="currentWorkspaceName">Apex Realty & Capital Advisory</span>
+          <span class="ws-role" id="currentUserRole">Institutional Command (Hyderabad Core)</span>
         </div>
       </div>
 
@@ -34,36 +34,36 @@
         <button class="nav-item active" data-view="overview"><span class="nav-icon">📊</span> Overview</button>
         <button class="nav-item" data-view="agents"><span class="nav-icon">🤖</span> AI Agents (10)</button>
         <button class="nav-item" data-view="approvals">
-          <span class="nav-icon">🛡️</span> Approvals Gate
-          <span class="badge badge-warning" id="pendingApprovalsBadge">3</span>
+          <span class="nav-icon">🛡️</span> Compliance Gate
+          <span class="badge badge-warning" id="pendingApprovalsBadge">0</span>
         </button>
 
-        <div class="nav-section-label">OPERATIONS</div>
-        <button class="nav-item" data-view="properties"><span class="nav-icon">🏢</span> Property Research</button>
-        <button class="nav-item" data-view="leads"><span class="nav-icon">🎯</span> Buyer Leads</button>
-        <button class="nav-item" data-view="appointments"><span class="nav-icon">📅</span> Appointments</button>
-        <button class="nav-item" data-view="reports"><span class="nav-icon">📑</span> Investor Reports</button>
+        <div class="nav-section-label">INVESTMENT ASSETS</div>
+        <button class="nav-item" data-view="properties"><span class="nav-icon">🏢</span> Commercial Inventory</button>
+        <button class="nav-item" data-view="reports"><span class="nav-icon">📑</span> 10-Yr Underwriting</button>
+        <button class="nav-item" data-view="leads"><span class="nav-icon">🎯</span> Institutional Leads</button>
+        <button class="nav-item" data-view="appointments"><span class="nav-icon">📅</span> Calendar & Visits</button>
 
-        <div class="nav-section-label">BUSINESS & GROWTH</div>
-        <button class="nav-item" data-view="customers"><span class="nav-icon">👥</span> Customers / CRM</button>
-        <button class="nav-item" data-view="sales"><span class="nav-icon">💼</span> Sales Pipeline</button>
-        <button class="nav-item" data-view="revenue"><span class="nav-icon">💰</span> Revenue & Unit Econ</button>
+        <div class="nav-section-label">BROKERAGE & REVENUE</div>
+        <button class="nav-item" data-view="sales"><span class="nav-icon">💼</span> Brokerage Network</button>
+        <button class="nav-item" data-view="revenue"><span class="nav-icon">💰</span> MRR & Unit Econ</button>
+        <button class="nav-item" data-view="customers"><span class="nav-icon">👥</span> Client Tenants</button>
 
-        <div class="nav-section-label">GOVERNANCE</div>
+        <div class="nav-section-label">GOVERNANCE & AUDIT</div>
         <button class="nav-item" data-view="integrations"><span class="nav-icon">⚡</span> Integrations</button>
-        <button class="nav-item" data-view="audit"><span class="nav-icon">📜</span> Activity Logs</button>
-        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙️</span> Settings</button>
+        <button class="nav-item" data-view="audit"><span class="nav-icon">📜</span> Audit Ledger</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙️</span> Configuration</button>
       </nav>
 
       <div class="sidebar-footer">
         <div class="connection-status">
-          <span class="pulse-indicator"></span> Orchestrator Live (9 Agents)
+          <span class="pulse-indicator"></span> Autonomous Bus Online (10 Agents)
         </div>
         <div class="user-strip">
-          <span class="user-avatar">Q</span>
+          <span class="user-avatar">A</span>
           <div class="user-details">
-            <span class="user-name">Quill (CTO Agent)</span>
-            <span class="user-email">admin@estate.ai</span>
+            <span class="user-name">Apex Capital Desk</span>
+            <span class="user-email">operations@apexrealty.co.in</span>
           </div>
         </div>
       </div>
@@ -75,12 +75,26 @@
       <header class="top-bar">
         <div class="search-command-bar">
           <span class="command-icon">⚡</span>
-          <input type="text" id="orchestratorCommandInput" placeholder="Give natural language command to Master Operations Manager (e.g. 'Find 50 verified commercial properties in Hyderabad')...">
-          <button class="btn btn-primary" id="btnRunCommand">Execute Dispatch</button>
+          <input type="text" id="orchestratorCommandInput" placeholder="Command Master AI (e.g. 'Underwrite Raheja Mindspace', 'Qualify all institutional leads')...">
+          <button class="btn btn-primary" id="btnRunCommand">Execute</button>
         </div>
         <div class="top-actions">
+          <!-- Currency Toggle -->
+          <div class="currency-toggle">
+            <button class="btn-toggle active" id="btnCurrINR" onclick="app.setCurrency('INR')">INR (₹ Cr)</button>
+            <button class="btn-toggle" id="btnCurrUSD" onclick="app.setCurrency('USD')">USD ($ M)</button>
+          </div>
+          <!-- Submarket Selector -->
+          <select id="topSubmarketFilter" class="top-select" onchange="app.onSubmarketChange()">
+            <option value="">All Hyderabad Corridors</option>
+            <option value="HITEC City">HITEC City / Madhapur</option>
+            <option value="Financial District">Financial District</option>
+            <option value="Gachibowli">Gachibowli / Raidurgam</option>
+            <option value="Kokapet">Kokapet (Neopolis)</option>
+            <option value="Jubilee Hills">Jubilee Hills</option>
+            <option value="Shamshabad">Shamshabad Aero-Park</option>
+          </select>
           <button class="btn btn-outline" id="btnRefreshData">🔄 Refresh</button>
-          <div class="target-market-badge">📍 Hyderabad (Telangana)</div>
         </div>
       </header>
 
@@ -93,11 +107,11 @@
         <section id="view-overview" class="view-panel active">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Executive Operations Overview</h1>
-              <p class="view-desc">Real-time status of commercial real estate discovery, lead qualification, and institutional deal flow.</p>
+              <h1 class="view-title">Executive Operations Command</h1>
+              <p class="view-desc">Autonomous commercial property intelligence, verified TS-RERA title diligence, and 10-year DCF underwriting.</p>
             </div>
             <div class="header-actions">
-              <button class="btn btn-secondary" onclick="app.dispatchQuick('Generate my daily business performance report')">Generate Daily Brief</button>
+              <button class="btn btn-secondary" onclick="app.dispatchQuick('Generate daily institutional operations briefing')">Generate Daily Brief</button>
               <button class="btn btn-primary" onclick="app.openModal('modal-add-property')">+ Add Property</button>
             </div>
           </div>
@@ -105,54 +119,44 @@
           <!-- KPI METRICS GRID -->
           <div class="kpi-grid">
             <div class="kpi-card">
-              <div class="kpi-label">Total Properties Researched</div>
+              <div class="kpi-label">Commercial Assets Tracked</div>
               <div class="kpi-val" id="kpiTotalProperties">--</div>
-              <div class="kpi-sub positive">100% deduplicated & verified</div>
+              <div class="kpi-sub positive">100% TS-RERA verified</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Verified Listings</div>
-              <div class="kpi-val" id="kpiVerifiedListings">--</div>
-              <div class="kpi-sub">Grade-A Hyderabad assets</div>
+              <div class="kpi-label">Grade-A Commercial Space</div>
+              <div class="kpi-val" id="kpiTotalSqft">--</div>
+              <div class="kpi-sub">HITEC City & Financial Dist</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Total Buyer Leads</div>
+              <div class="kpi-label">Active Portfolio Value</div>
+              <div class="kpi-val highlight" id="kpiPortfolioValue">--</div>
+              <div class="kpi-sub positive" id="kpiAvgCapRate">Avg Yield: 8.2% Gross</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Institutional Buyer Leads</div>
               <div class="kpi-val" id="kpiTotalLeads">--</div>
-              <div class="kpi-sub">Opt-in consent verified</div>
+              <div class="kpi-sub">Verified written KYC consent</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Qualified Leads</div>
+              <div class="kpi-label">Qualified Capital Pipeline</div>
               <div class="kpi-val highlight" id="kpiQualifiedLeads">--</div>
               <div class="kpi-sub positive" id="kpiLeadConversionRate">--</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Upcoming Appointments</div>
+              <div class="kpi-label">Scheduled Due Diligence Visits</div>
               <div class="kpi-val" id="kpiUpcomingAppointments">--</div>
               <div class="kpi-sub">Zero calendar conflicts</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Investor Reports Generated</div>
+              <div class="kpi-label">10-Yr DCF Memorandums</div>
               <div class="kpi-val" id="kpiReportsGenerated">--</div>
-              <div class="kpi-sub">PDF & Excel underwritten</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-label">Active Paying Clients</div>
-              <div class="kpi-val" id="kpiActiveClients">--</div>
-              <div class="kpi-sub">Multi-tenant isolation</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-label">Monthly Run Rate (MRR)</div>
-              <div class="kpi-val" id="kpiMonthlyRevenue">$1,999</div>
-              <div class="kpi-sub positive">Target: $1,000 / day</div>
+              <div class="kpi-sub">Audit-ready PDF & Excel</div>
             </div>
             <div class="kpi-card alert-card">
-              <div class="kpi-label">Pending Approvals</div>
-              <div class="kpi-val text-warning" id="kpiPendingApprovals">--</div>
+              <div class="kpi-label">Pending Compliance Reviews</div>
+              <div class="kpi-val text-warning" id="kpiPendingApprovals">0</div>
               <div class="kpi-sub">Human-in-the-loop gates</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-label">AI & Infrastructure Cost</div>
-              <div class="kpi-val text-success" id="kpiAccumulatedCost">$40.50</div>
-              <div class="kpi-sub">Gross Margin: 97.9%</div>
             </div>
           </div>
 
@@ -160,8 +164,8 @@
           <div class="grid-2-col">
             <div class="panel">
               <div class="panel-header">
-                <h3>⚡ Master Operations Queue & Recent Dispatches</h3>
-                <span class="badge badge-info">Persistent DB Queue</span>
+                <h3>⚡ Master Operations Log & Autonomous Dispatches</h3>
+                <span class="badge badge-info">Continuous Bus</span>
               </div>
               <div class="table-responsive">
                 <table class="data-table" id="tableRecentTasks">
@@ -170,8 +174,8 @@
                       <th>Agent</th>
                       <th>Command</th>
                       <th>Status</th>
-                      <th>Cost</th>
-                      <th>Time</th>
+                      <th>Compute Cost</th>
+                      <th>Timestamp</th>
                     </tr>
                   </thead>
                   <tbody></tbody>
@@ -181,7 +185,7 @@
 
             <div class="panel">
               <div class="panel-header">
-                <h3>🛡️ Urgent Human Approvals Required</h3>
+                <h3>🛡️ Urgent Compliance Gate Sign-Offs</h3>
                 <button class="btn btn-sm btn-outline" onclick="app.navigate('approvals')">View All</button>
               </div>
               <div id="overviewApprovalsList" class="stack-list"></div>
@@ -193,10 +197,10 @@
         <section id="view-agents" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Specialized AI Agent Department Registry</h1>
-              <p class="view-desc">Monitor live status, latency, execution cost, success rates, and retry policies for all 10 departments.</p>
+              <h1 class="view-title">Autonomous AI Department Registry</h1>
+              <p class="view-desc">Monitor live telemetry, execution latency, compute token costs, and retry policies for all 10 specialized departments.</p>
             </div>
-            <button class="btn btn-primary" onclick="app.dispatchQuick('Generate my daily business performance report')">Audit All Agents</button>
+            <button class="btn btn-primary" onclick="app.dispatchQuick('Audit all agent workflows and verify TS-RERA endpoints')">Run Department Audit</button>
           </div>
           <div class="agent-cards-grid" id="agentCardsContainer"></div>
         </section>
@@ -205,8 +209,8 @@
         <section id="view-approvals" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Compliance & Human-in-the-Loop Approval Gate</h1>
-              <p class="view-desc">Protecting business integrity: All outbound proposals, external communications, and critical reports require broker approval.</p>
+              <h1 class="view-title">Human-in-the-Loop Compliance Gate</h1>
+              <p class="view-desc">Safeguarding institutional integrity: External investment memorandums, outbound B2B proposals, and contract drafts require designated broker sign-off.</p>
             </div>
           </div>
           <div class="panel">
@@ -215,11 +219,11 @@
                 <thead>
                   <tr>
                     <th>Action Type</th>
-                    <th>Description</th>
+                    <th>Proposal Description</th>
                     <th>Requested By</th>
                     <th>Status</th>
-                    <th>Date</th>
-                    <th>Review Actions</th>
+                    <th>Timestamp</th>
+                    <th>Review Action</th>
                   </tr>
                 </thead>
                 <tbody></tbody>
@@ -232,24 +236,32 @@
         <section id="view-properties" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Hyderabad Property Research & Inventory</h1>
-              <p class="view-desc">Verified commercial offices, IT towers, retail showrooms, industrial warehouses, and plots across HITEC City, Gachibowli, Kokapet, and Tellapur.</p>
+              <h1 class="view-title">Verified Commercial Property Inventory</h1>
+              <p class="view-desc">Institutional Grade-A tech parks, commercial high-rise floor plates, retail anchors, and logistics assets across West Hyderabad.</p>
             </div>
             <div class="header-actions">
-              <button class="btn btn-secondary" onclick="app.dispatchQuick('Find 50 verified commercial properties in Hyderabad')">🤖 Run AI Discovery</button>
+              <button class="btn btn-secondary" onclick="app.dispatchQuick('Find commercial properties in Kokapet')">🤖 Ingest Corridor Feed</button>
               <button class="btn btn-primary" onclick="app.openModal('modal-add-property')">+ Add Property</button>
             </div>
           </div>
 
           <div class="filters-row">
-            <input type="text" id="propSearchQuery" placeholder="Filter by neighborhood, title..." oninput="app.filterProperties()">
+            <input type="text" id="propSearchQuery" placeholder="Search by tech park, neighborhood, tenant..." oninput="app.filterProperties()">
             <select id="propCategoryFilter" onchange="app.filterProperties()">
               <option value="">All Categories</option>
               <option value="Commercial Office">Commercial Office</option>
               <option value="Commercial Retail">Commercial Retail</option>
               <option value="Industrial Warehouse">Industrial Warehouse</option>
-              <option value="Residential">Residential</option>
-              <option value="Plot">Plot / Land</option>
+              <option value="Plot">Commercial Land / Plot</option>
+            </select>
+            <select id="propNeighborhoodFilter" onchange="app.filterProperties()">
+              <option value="">All Submarkets</option>
+              <option value="HITEC City">HITEC City</option>
+              <option value="Financial District">Financial District</option>
+              <option value="Gachibowli">Gachibowli</option>
+              <option value="Kokapet">Kokapet</option>
+              <option value="Jubilee Hills">Jubilee Hills</option>
+              <option value="Shamshabad">Shamshabad</option>
             </select>
           </div>
 
@@ -258,13 +270,13 @@
               <table class="data-table" id="tableProperties">
                 <thead>
                   <tr>
-                    <th>Property Title</th>
+                    <th>Asset Title & Location</th>
                     <th>Category</th>
-                    <th>Neighborhood</th>
+                    <th>Submarket</th>
                     <th>Asking Price</th>
                     <th>Size (sqft)</th>
                     <th>Rate/sqft</th>
-                    <th>Verification</th>
+                    <th>TS-RERA Status</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -274,15 +286,45 @@
           </div>
         </section>
 
-        <!-- 5. BUYER LEADS VIEW -->
+        <!-- 5. 10-YR UNDERWRITING & REPORTS VIEW -->
+        <section id="view-reports" class="view-panel">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">10-Year DCF Underwriting & Investment Memorandums</h1>
+              <p class="view-desc">Institutional cash flow models featuring contractual 15% lease escalations, terminal cap rates, levered IRR, and 30-year TS-RERA title search.</p>
+            </div>
+            <button class="btn btn-primary" onclick="app.openUnderwriteModalForFirst()">⚡ Underwrite Active Asset</button>
+          </div>
+
+          <div class="panel">
+            <div class="table-responsive">
+              <table class="data-table" id="tableReports">
+                <thead>
+                  <tr>
+                    <th>Memorandum Title</th>
+                    <th>Client / Fund</th>
+                    <th>Capital Outlay</th>
+                    <th>In-Place Yield</th>
+                    <th>Net Cap Rate</th>
+                    <th>Underwriting Date</th>
+                    <th>Exports</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. BUYER LEADS VIEW -->
         <section id="view-leads" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Buyer Leads & Qualification Pipeline</h1>
-              <p class="view-desc">Consent-backed buyer inquiries scored objectively by budget readiness, timeline, and asset parameters.</p>
+              <h1 class="view-title">Institutional Buyer Leads & Capital Mandates</h1>
+              <p class="view-desc">Consent-backed family office allocations, sovereign funds, and accredited corporate buyers scored objectively by capital readiness and timeline.</p>
             </div>
             <div class="header-actions">
-              <button class="btn btn-secondary" onclick="app.qualifyAllLeads()">🤖 Run AI Qualification</button>
+              <button class="btn btn-secondary" onclick="app.qualifyAllLeads()">🤖 AI Qualification Run</button>
               <button class="btn btn-outline" onclick="app.openModal('modal-import-csv')">📥 Import CSV</button>
               <button class="btn btn-primary" onclick="app.openModal('modal-add-lead')">+ New Lead</button>
             </div>
@@ -293,13 +335,13 @@
               <table class="data-table" id="tableLeads">
                 <thead>
                   <tr>
-                    <th>Lead Name</th>
-                    <th>Contact</th>
-                    <th>Target Asset</th>
-                    <th>Budget Range</th>
+                    <th>Investor / Lead Name</th>
+                    <th>Contact & Verification</th>
+                    <th>Target Asset Class</th>
+                    <th>Capital Allocation</th>
                     <th>Score</th>
                     <th>Status</th>
-                    <th>Recommended Action</th>
+                    <th>Mandate Directive</th>
                   </tr>
                 </thead>
                 <tbody></tbody>
@@ -308,14 +350,14 @@
           </div>
         </section>
 
-        <!-- 6. APPOINTMENTS VIEW -->
+        <!-- 7. APPOINTMENTS VIEW -->
         <section id="view-appointments" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Appointment Coordination & Calendar</h1>
-              <p class="view-desc">Automated site visits, consultations, and broker meetings scheduled with zero double-booking in Asia/Kolkata timezone.</p>
+              <h1 class="view-title">Due Diligence Site Visits & Broker Schedule</h1>
+              <p class="view-desc">Conflict-free site inspections and investor presentations scheduled in Asia/Kolkata timezone with automated calendar reminders.</p>
             </div>
-            <button class="btn btn-primary" onclick="app.openModal('modal-add-appointment')">+ Schedule Appointment</button>
+            <button class="btn btn-primary" onclick="app.openModal('modal-add-appointment')">+ Schedule Inspection</button>
           </div>
 
           <div class="panel">
@@ -327,7 +369,7 @@
                     <th>Type</th>
                     <th>Start Time</th>
                     <th>End Time</th>
-                    <th>Location / Link</th>
+                    <th>Location / Inspection Desk</th>
                     <th>Status</th>
                   </tr>
                 </thead>
@@ -337,55 +379,14 @@
           </div>
         </section>
 
-        <!-- 7. INVESTOR REPORTS VIEW -->
-        <section id="view-reports" class="view-panel">
-          <div class="view-header">
-            <div>
-              <h1 class="view-title">Investor Research & Underwriting Memorandums</h1>
-              <p class="view-desc">Institutional financial models with gross yields, net cap rates, 30-year title diligence checklists, and instant PDF/Excel exports.</p>
-            </div>
-            <button class="btn btn-primary" onclick="app.dispatchQuick('Prepare today\'s investor opportunities report')">🤖 Underwrite New Asset</button>
-          </div>
-
-          <div class="panel">
-            <div class="table-responsive">
-              <table class="data-table" id="tableReports">
-                <thead>
-                  <tr>
-                    <th>Memorandum Title</th>
-                    <th>Client</th>
-                    <th>Asking Price</th>
-                    <th>Gross Yield</th>
-                    <th>Net Cap Rate</th>
-                    <th>Date</th>
-                    <th>Downloads</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <!-- 8. CUSTOMERS / WORKSPACES VIEW -->
-        <section id="view-customers" class="view-panel">
-          <div class="view-header">
-            <div>
-              <h1 class="view-title">Customer Workspaces & Multi-Tenant CRM</h1>
-              <p class="view-desc">Multi-tenant isolation: Brokerage clients have strict, dedicated data boundaries with zero cross-tenant visibility.</p>
-            </div>
-          </div>
-          <div class="panel" id="customersPanelContent"></div>
-        </section>
-
-        <!-- 9. SALES PIPELINE VIEW -->
+        <!-- 8. SALES PIPELINE VIEW -->
         <section id="view-sales" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">B2B Sales Pipeline & Client Acquisition</h1>
-              <p class="view-desc">Target real estate brokerages, commercial developers, and property investment firms in Hyderabad.</p>
+              <h1 class="view-title">Brokerage Partner Network & Client Acquisition</h1>
+              <p class="view-desc">Institutional commercial brokerages and developer asset management desks active across the Hyderabad tech corridor.</p>
             </div>
-            <button class="btn btn-primary" onclick="app.dispatchQuick('Discover B2B real estate agency prospects')">🤖 Research New Prospects</button>
+            <button class="btn btn-primary" onclick="app.dispatchQuick('Discover B2B real estate agency prospects')">🤖 Research Brokerage Partners</button>
           </div>
 
           <div class="panel">
@@ -393,12 +394,12 @@
               <table class="data-table" id="tableSalesProspects">
                 <thead>
                   <tr>
-                    <th>Business Name</th>
-                    <th>Contact Person</th>
+                    <th>Firm Name</th>
+                    <th>Principal Contact</th>
                     <th>Category</th>
-                    <th>City / State</th>
-                    <th>Proposal Status</th>
-                    <th>Est. Value</th>
+                    <th>Location</th>
+                    <th>Enterprise Status</th>
+                    <th>Est. Monthly Value</th>
                   </tr>
                 </thead>
                 <tbody></tbody>
@@ -407,55 +408,66 @@
           </div>
         </section>
 
-        <!-- 10. REVENUE & UNIT ECONOMICS VIEW -->
+        <!-- 9. REVENUE & UNIT ECONOMICS VIEW -->
         <section id="view-revenue" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Finance, MRR & $1,000/Day Revenue Roadmap</h1>
-              <p class="view-desc">Financial telemetry: Unit economics, API token costs, gross margin, and subscription recurring contracts.</p>
+              <h1 class="view-title">Finance, Unit Economics & Platform MRR</h1>
+              <p class="view-desc">Financial telemetry: Operating gross margin (97.9%), token caching efficiency, and recurring enterprise subscription run-rate.</p>
             </div>
           </div>
           <div class="revenue-dashboard-cards" id="revenueMetricsContainer"></div>
+        </section>
+
+        <!-- 10. CUSTOMERS / WORKSPACES VIEW -->
+        <section id="view-customers" class="view-panel">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Client Workspaces & Tenant Partitioning</h1>
+              <p class="view-desc">Strict cryptographic data boundaries: Each brokerage client operates in dedicated data isolation with zero cross-tenant visibility.</p>
+            </div>
+          </div>
+          <div class="panel" id="customersPanelContent"></div>
         </section>
 
         <!-- 11. INTEGRATIONS VIEW -->
         <section id="view-integrations" class="view-panel">
           <div class="view-header">
             <div>
-              <h1 class="view-title">Connected Enterprise Integrations</h1>
-              <p class="view-desc">Seamless connectors to Google Calendar, Microsoft Outlook, WhatsApp Business, CBRE Feeds, RERA Telangana, and Composio toolsets.</p>
+              <h1 class="view-title">Connected Enterprise Gateways</h1>
+              <p class="view-desc">Active integrations connecting statutory land registries, corporate calendars, and institutional communication toolsets.</p>
             </div>
           </div>
           <div class="integrations-grid">
             <div class="integration-card">
+              <div class="int-icon">🏛️</div>
+              <div class="int-info">
+                <h3>Telangana RERA & Land Registry</h3>
+                <p>Public statutory verification engine validating layout approvals and 30-year title deeds.</p>
+                <span class="badge badge-success">Live Statutory Gateway</span>
+              </div>
+            </div>
+            <div class="integration-card">
               <div class="int-icon">📅</div>
               <div class="int-info">
-                <h3>Google Calendar & Outlook</h3>
-                <p>Two-way sync for property visit scheduling and broker calendars.</p>
+                <h3>Google Calendar & Office 365</h3>
+                <p>Automated two-way broker calendar synchronization with zero double-booking.</p>
                 <span class="badge badge-success">Connected via OpenMausBot</span>
               </div>
             </div>
             <div class="integration-card">
               <div class="int-icon">💬</div>
               <div class="int-info">
-                <h3>WhatsApp & Email Gateway</h3>
-                <p>Consent-verified opt-in lead communications and visit confirmations.</p>
+                <h3>WhatsApp Business Cloud Gateway</h3>
+                <p>Opt-in consent-governed investor communications with human approval safeguard.</p>
                 <span class="badge badge-success">Active with Approval Gates</span>
-              </div>
-            </div>
-            <div class="integration-card">
-              <div class="int-icon">🏛️</div>
-              <div class="int-info">
-                <h3>Telangana RERA & Land Registry</h3>
-                <p>Public statutory verification check engine for sanctioned layout plans.</p>
-                <span class="badge badge-info">Authorized Search Gateway</span>
               </div>
             </div>
             <div class="integration-card">
               <div class="int-icon">💳</div>
               <div class="int-info">
                 <h3>Razorpay & Stripe Connect</h3>
-                <p>Multi-currency subscription billing in INR and USD.</p>
+                <p>Multi-currency subscription processing in INR and USD for enterprise client desks.</p>
                 <span class="badge badge-success">Production Sandbox Ready</span>
               </div>
             </div>
@@ -467,7 +479,7 @@
           <div class="view-header">
             <div>
               <h1 class="view-title">Immutable Audit Trail</h1>
-              <p class="view-desc">Every agent task, property edit, lead qualification change, and approval decision logged with timestamps.</p>
+              <p class="view-desc">Every AI task dispatch, property edit, lead scoring update, and compliance gate decision recorded with ISO timestamps.</p>
             </div>
           </div>
           <div class="panel">
@@ -479,7 +491,7 @@
                     <th>Action</th>
                     <th>Entity Type</th>
                     <th>Entity ID</th>
-                    <th>IP / Bus</th>
+                    <th>Client / Node</th>
                   </tr>
                 </thead>
                 <tbody></tbody>
@@ -493,7 +505,7 @@
           <div class="view-header">
             <div>
               <h1 class="view-title">Platform Configuration & Compliance Controls</h1>
-              <p class="view-desc">Configure target city corridors, LLM models, retry limits, and human approval policies.</p>
+              <p class="view-desc">Operational policies for Hyderabad commercial corridors, underwriting discount rates, and human sign-off rules.</p>
             </div>
           </div>
           <div class="panel">
@@ -503,30 +515,53 @@
                 <input type="text" value="Hyderabad, Telangana, India" disabled>
               </div>
               <div class="form-group">
-                <label>Target Submarkets</label>
-                <input type="text" value="HITEC City, Gachibowli, Kokapet, Tellapur, Financial District" disabled>
+                <label>Active Commercial Corridors</label>
+                <input type="text" value="HITEC City, Financial District, Gachibowli, Kokapet (Neopolis), Jubilee Hills" disabled>
               </div>
               <div class="form-group">
-                <label>Primary Currency</label>
-                <input type="text" value="INR (Indian Rupee)" disabled>
+                <label>Baseline DCF Discount Rate</label>
+                <input type="text" value="11.5% (Cost of Capital)" disabled>
               </div>
               <div class="form-group">
-                <label>Secondary Currency</label>
-                <input type="text" value="USD (US Dollar)" disabled>
+                <label>Contractual Escalation Model</label>
+                <input type="text" value="15.0% every 36 months (Institutional Standard)" disabled>
               </div>
               <div class="form-group">
                 <label>Human Approval Requirement</label>
-                <input type="text" value="Mandatory for Outbound Comms & Report Publication" disabled>
+                <input type="text" value="Mandatory for Outbound Memorandums & B2B Proposals" disabled>
               </div>
               <div class="form-group">
                 <label>AI Cost Optimization</label>
-                <input type="text" value="Active (Streaming + Caching + Strict Input Schemas)" disabled>
+                <input type="text" value="Streaming + Deterministic Caching + Schema Validation" disabled>
               </div>
             </div>
           </div>
         </section>
       </div>
     </main>
+  </div>
+
+  <!-- MODAL: INTERACTIVE 10-YEAR DCF UNDERWRITING & MEMORANDUM -->
+  <div id="modal-underwrite" class="modal-overlay hidden">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div>
+          <h3 id="underwriteModalTitle">10-Year DCF Underwriting Memorandum</h3>
+          <p class="modal-desc" id="underwriteModalSub">Institutional Financial Model & Diligence Summary</p>
+        </div>
+        <button class="modal-close" onclick="app.closeModal('modal-underwrite')">&times;</button>
+      </div>
+
+      <div class="underwrite-body" id="underwriteModalContent">
+        <!-- Dynamically injected DCF model -->
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="app.closeModal('modal-underwrite')">Close</button>
+        <button type="button" class="btn btn-secondary" onclick="app.exportDcfCsv()">📊 Export DCF Excel (CSV)</button>
+        <button type="button" class="btn btn-primary" onclick="app.printMemorandum()">🖨️ Print / Save Official PDF</button>
+      </div>
+    </div>
   </div>
 
   <!-- MODAL: ADD PROPERTY -->
@@ -540,7 +575,7 @@
         <div class="form-grid">
           <div class="form-group col-2">
             <label>Listing Title</label>
-            <input type="text" id="newPropTitle" required placeholder="e.g. Grade-A Office Floor, Gachibowli">
+            <input type="text" id="newPropTitle" required placeholder="e.g. Phoenix Aquila Commercial Floor Plate">
           </div>
           <div class="form-group">
             <label>Category</label>
@@ -548,30 +583,41 @@
               <option value="Commercial Office">Commercial Office</option>
               <option value="Commercial Retail">Commercial Retail</option>
               <option value="Industrial Warehouse">Industrial Warehouse</option>
-              <option value="Residential">Residential</option>
-              <option value="Plot">Plot / Land</option>
+              <option value="Plot">Commercial Land / Plot</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Neighborhood (Hyderabad)</label>
-            <input type="text" id="newPropNeighborhood" required placeholder="e.g. Kokapet">
+            <label>Submarket (Hyderabad)</label>
+            <select id="newPropNeighborhood">
+              <option value="HITEC City">HITEC City</option>
+              <option value="Financial District">Financial District</option>
+              <option value="Gachibowli">Gachibowli</option>
+              <option value="Kokapet">Kokapet (Neopolis)</option>
+              <option value="Jubilee Hills">Jubilee Hills</option>
+              <option value="Shamshabad">Shamshabad</option>
+              <option value="Tellapur">Tellapur</option>
+            </select>
           </div>
           <div class="form-group">
             <label>Asking Price (INR)</label>
-            <input type="number" id="newPropPrice" required placeholder="e.g. 50000000">
+            <input type="number" id="newPropPrice" required placeholder="e.g. 185000000 (18.5 Cr)">
           </div>
           <div class="form-group">
             <label>Size (sq ft)</label>
-            <input type="number" id="newPropSize" required placeholder="e.g. 4500">
+            <input type="number" id="newPropSize" required placeholder="e.g. 18500">
           </div>
-          <div class="form-group col-2">
-            <label>Source / Listing URL</label>
-            <input type="url" id="newPropUrl" placeholder="https://authorized-portal.in/listing/123">
+          <div class="form-group">
+            <label>TS-RERA Reg No. / Sanction</label>
+            <input type="text" id="newPropRera" required placeholder="e.g. TS-RERA/P02400004189">
+          </div>
+          <div class="form-group">
+            <label>Tenant / Lease Lock-in Details</label>
+            <input type="text" id="newPropTenant" placeholder="e.g. Pre-leased to MNC IT Tenant, 5-yr lock-in">
           </div>
         </div>
         <div class="modal-actions">
           <button type="button" class="btn btn-outline" onclick="app.closeModal('modal-add-property')">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save & Deduplicate</button>
+          <button type="submit" class="btn btn-primary">Save & Underwrite</button>
         </div>
       </form>
     </div>
@@ -581,40 +627,39 @@
   <div id="modal-add-lead" class="modal-overlay hidden">
     <div class="modal-card">
       <div class="modal-header">
-        <h3>+ Ingest Verified Buyer Lead</h3>
+        <h3>+ Ingest Institutional Buyer Lead</h3>
         <button class="modal-close" onclick="app.closeModal('modal-add-lead')">&times;</button>
       </div>
       <form id="formAddLead" onsubmit="app.submitAddLead(event)">
         <div class="form-grid">
           <div class="form-group">
-            <label>Buyer Full Name</label>
-            <input type="text" id="newLeadName" required placeholder="e.g. Anand Mahindra">
+            <label>Investor / Principal Name</label>
+            <input type="text" id="newLeadName" required placeholder="e.g. K. V. Ramana Rao">
           </div>
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="newLeadEmail" required placeholder="anand@domain.in">
+            <label>Corporate / Fund Email</label>
+            <input type="email" id="newLeadEmail" required placeholder="e.g. ramana.rao@deccantrust.com">
           </div>
           <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" id="newLeadPhone" required placeholder="+91 98000 11223">
+            <label>Phone / Desk Number</label>
+            <input type="tel" id="newLeadPhone" required placeholder="+91 (040) 6902-8901">
           </div>
           <div class="form-group">
-            <label>Preferred Asset Category</label>
+            <label>Target Asset Category</label>
             <select id="newLeadCategory">
               <option value="Commercial Office">Commercial Office</option>
               <option value="Commercial Retail">Commercial Retail</option>
               <option value="Industrial Warehouse">Industrial Warehouse</option>
-              <option value="Residential">Residential</option>
-              <option value="Plot">Plot</option>
+              <option value="Plot">Commercial Land / Plot</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Max Budget (INR)</label>
-            <input type="number" id="newLeadBudget" required placeholder="e.g. 60000000">
+            <label>Max Allocation (INR)</label>
+            <input type="number" id="newLeadBudget" required placeholder="e.g. 250000000 (25 Cr)">
           </div>
           <div class="form-group">
-            <label>Preferred Locations</label>
-            <input type="text" id="newLeadLocations" value="HITEC City, Gachibowli">
+            <label>Preferred Corridors</label>
+            <input type="text" id="newLeadLocations" value="HITEC City, Financial District, Kokapet">
           </div>
         </div>
         <div class="modal-actions">
@@ -633,7 +678,7 @@
         <button class="modal-close" onclick="app.closeModal('modal-import-csv')">&times;</button>
       </div>
       <p class="modal-desc">Upload a CSV file containing columns: full_name, email, phone, budget_max, property_category, preferred_locations.</p>
-      <input type="file" id="csvFileInput" accept=".csv">
+      <input type="file" id="csvFileInput" accept=".csv" style="margin: 15px 0;">
       <div class="modal-actions">
         <button type="button" class="btn btn-outline" onclick="app.closeModal('modal-import-csv')">Cancel</button>
         <button type="button" class="btn btn-primary" onclick="app.submitCsvImport()">Upload & Ingest</button>
@@ -645,25 +690,25 @@
   <div id="modal-add-appointment" class="modal-overlay hidden">
     <div class="modal-card">
       <div class="modal-header">
-        <h3>📅 Schedule Appointment</h3>
+        <h3>📅 Schedule Site Visit / Inspection</h3>
         <button class="modal-close" onclick="app.closeModal('modal-add-appointment')">&times;</button>
       </div>
       <form id="formAddAppt" onsubmit="app.submitAddAppointment(event)">
         <div class="form-grid">
           <div class="form-group col-2">
-            <label>Appointment Title</label>
-            <input type="text" id="apptTitle" required placeholder="e.g. Site Visit - Grade A Tech Park">
+            <label>Inspection Title</label>
+            <input type="text" id="apptTitle" required placeholder="e.g. Due Diligence Tour: Raheja Mindspace Building 12D">
           </div>
           <div class="form-group">
-            <label>Select Lead</label>
+            <label>Select Investor Lead</label>
             <select id="apptLeadSelect" required></select>
           </div>
           <div class="form-group">
             <label>Appointment Type</label>
             <select id="apptType">
-              <option value="Property Visit">Property Visit</option>
-              <option value="Investor Consultation">Investor Consultation</option>
-              <option value="Buyer Call">Buyer Call</option>
+              <option value="Property Visit">On-Site Asset Inspection</option>
+              <option value="Investor Consultation">Investment Committee Briefing</option>
+              <option value="Buyer Call">Commercial Advisory Call</option>
             </select>
           </div>
           <div class="form-group">
@@ -675,8 +720,8 @@
             <input type="number" id="apptDuration" value="60">
           </div>
           <div class="form-group col-2">
-            <label>Location / Meeting Link</label>
-            <input type="text" id="apptLocation" value="Mindspace IT Park / Google Meet">
+            <label>Meeting Location / Inspection Desk</label>
+            <input type="text" id="apptLocation" value="Mindspace Madhapur Commercial Corridor, Hyderabad">
           </div>
         </div>
         <div class="modal-actions">
@@ -696,16 +741,16 @@
       </div>
       <p id="approvalModalDesc" class="modal-desc"></p>
       <div class="form-group">
-        <label>Broker Comments / Instructions</label>
-        <textarea id="approvalDecisionComment" rows="3" placeholder="Add optional comments or compliance notes..."></textarea>
+        <label>Principal Broker Sign-Off Notes</label>
+        <textarea id="approvalDecisionComment" rows="3" placeholder="Enter compliance approval confirmation or revision requirements..."></textarea>
       </div>
       <div class="modal-actions">
         <button type="button" class="btn btn-danger" onclick="app.submitApprovalDecision('REJECTED')">Reject Action</button>
-        <button type="button" class="btn btn-success" onclick="app.submitApprovalDecision('APPROVED')">Approve & Dispatch</button>
+        <button type="button" class="btn btn-success" onclick="app.submitApprovalDecision('APPROVED')">Sign-Off & Dispatch</button>
       </div>
     </div>
   </div>
 
-  <script src="/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
