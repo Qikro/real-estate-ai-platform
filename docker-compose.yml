@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: estate_ai_ops
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=Real Estate AI Operations Platform
+      - INITIAL_TARGET_CITY=Hyderabad
+      - INITIAL_TARGET_STATE=Telangana
+      - DATABASE_URL=postgresql://estate_user:estate_pass@db:5432/estate_ops
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    container_name: estate_ai_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: estate_user
+      POSTGRES_PASSWORD: estate_pass
+      POSTGRES_DB: estate_ops
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
